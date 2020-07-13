@@ -1,6 +1,6 @@
 # Site settings
 title: MC Blog
-SEOTitle: 陈铭杰的博客 | MC Blog
+SEOTitle: MC Blog | 陈铭杰的博客
 header-img: img/home-bg.jpg
 email: echo TWljaGFlbF9DaGVuX0NTQGZveG1haWwuY29t | base64 -D
 description: "Description"
@@ -13,11 +13,12 @@ future: true
 
 # SNS settings
 RSS: false
-weibo_username:     huxpro
-zhihu_username:     huxpro
-github_username:    huxpro
-twitter_username:   huxpro
+weibo_username:     -Messiah_
+zhihu_username:     网上邻居
+github_username:    MessiahChen
+#twitter_username:   huxpro
 #facebook_username:  huxpro
+linkedin_username:  michael-chen-cs
 #linkedin_username:  firstname-lastname-idxxxx
 
 
