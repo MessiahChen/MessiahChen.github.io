@@ -16,4 +16,4 @@ $ bundle install
 
 $ bundle exec jekyll serve  # alternatively, npm start
 ```
-Now visit [127.0.0.1:4000](127.0.0.1:4000) for preview.
+Now visit [localhost: 4000](127.0.0.1:4000) for preview.

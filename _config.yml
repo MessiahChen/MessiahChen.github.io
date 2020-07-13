@@ -1,7 +1,7 @@
 # Site settings
 title: MC Blog
 SEOTitle: MC Blog | 陈铭杰的博客
-header-img: img/home-bg.jpg
+header-img: img/home-mc-bg.jpg
 email: echo TWljaGFlbF9DaGVuX0NTQGZveG1haWwuY29t | base64 -D
 description: "Description"
 keyword: "陈铭杰，Michael Chen, Mingjie Chen"
@@ -85,7 +85,7 @@ sidebar-avatar: /img/avatar-mc-selfie.png      # use absolute URL, seeing it's u
 
 
 # Featured Tags
-featured-tags: true                     # whether or not using Feature-Tags
+featured-tags: false                     # whether or not using Feature-Tags
 featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
 
 
@@ -101,37 +101,37 @@ page-mathjax: false
 
 
 
-# Friends
-friends: [
-    {
-    #     title: "Su",
-    #     href: "http://su.gallery/"
-    # },{
-        title: "乱序",
-        href: "http://mida.re/"
-    },{
-        title: "Sherry Wu",
-        href: "https://xuechundesign.github.io"
-    },{
-        title: "Luke 的自留地",
-        href: "http://hmqk1995.github.io"
-    },{
-        title: "Ebn's Blog",
-        href: "http://ebnbin.com/"
-    },{
-        title: "SmdCn's Blog",
-        href: "http://blog.smdcn.net"
-    },{
-        title: "JiyinYiyong",
-        href: "http://tiye.me/"
-    },{
-        title: "David's Game",
-        href: "https://www.ruoyaowu.com/"
-    },{
-        title: "DHong Say",
-        href: "http://dhong.co"
-    },{
-        title: "尹峰以为",
-        href: "http://ingf.github.io/"
-    }
-]
+## Friends
+#friends: [
+#    {
+#    #     title: "Su",
+#    #     href: "http://su.gallery/"
+#    # },{
+#        title: "乱序",
+#        href: "http://mida.re/"
+#    },{
+#        title: "Sherry Wu",
+#        href: "https://xuechundesign.github.io"
+#    },{
+#        title: "Luke 的自留地",
+#        href: "http://hmqk1995.github.io"
+#    },{
+#        title: "Ebn's Blog",
+#        href: "http://ebnbin.com/"
+#    },{
+#        title: "SmdCn's Blog",
+#        href: "http://blog.smdcn.net"
+#    },{
+#        title: "JiyinYiyong",
+#        href: "http://tiye.me/"
+#    },{
+#        title: "David's Game",
+#        href: "https://www.ruoyaowu.com/"
+#    },{
+#        title: "DHong Say",
+#        href: "http://dhong.co"
+#    },{
+#        title: "尹峰以为",
+#        href: "http://ingf.github.io/"
+#    }
+#]
