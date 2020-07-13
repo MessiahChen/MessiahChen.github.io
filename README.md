@@ -4,13 +4,16 @@
 ## Local Preview Setup
 
 ```bash
-brew install ruby
+$ brew install ruby
 
-gem install jekyll bundler
+$ gem install jekyll bundler
 
 # cd the directory of this directory.
-jekyll new . --force
+$ jekyll new . --force
 
-bundle exec jekyll serve
+# installed dependencies in the Gemfile:
+$ bundle install 
+
+$ bundle exec jekyll serve  # alternatively, npm start
 ```
 Now visit [127.0.0.1:4000](127.0.0.1:4000) for preview.
