@@ -13,7 +13,7 @@ future: true
 
 # SNS settings
 RSS: false
-weibo_username:     -Messiah_
+weibo_username:     MichaelChen1999
 zhihu_username:     MichaelChen1999
 github_username:    MessiahChen
 linkedin_username:  michael-chen-cs
