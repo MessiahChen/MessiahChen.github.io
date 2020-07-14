@@ -6,10 +6,7 @@ author: "Hux"
 header-style: text
 hidden: true
 tags:
-  - SF (软件基础)
-  - QC (Quickcheck)
-  - Coq
-  - 笔记
+    - 生活
 ---
 
 Considerring printing different types with this common idiom:
