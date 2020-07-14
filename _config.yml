@@ -16,7 +16,8 @@ RSS: false
 weibo_username:     MichaelChen1999
 zhihu_username:     MichaelChen1999
 github_username:    MessiahChen
-linkedin_username:  michael-chen-cs
+linkedin_username:  Michael-Chen-CS
+gitee_username:     MichaleChen1999
 #twitter_username:   huxpro
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
@@ -101,37 +102,10 @@ page-mathjax: false
 
 
 
-## Friends
-#friends: [
-#    {
-#    #     title: "Su",
-#    #     href: "http://su.gallery/"
-#    # },{
-#        title: "乱序",
-#        href: "http://mida.re/"
-#    },{
-#        title: "Sherry Wu",
-#        href: "https://xuechundesign.github.io"
-#    },{
-#        title: "Luke 的自留地",
-#        href: "http://hmqk1995.github.io"
-#    },{
-#        title: "Ebn's Blog",
-#        href: "http://ebnbin.com/"
-#    },{
-#        title: "SmdCn's Blog",
-#        href: "http://blog.smdcn.net"
-#    },{
-#        title: "JiyinYiyong",
-#        href: "http://tiye.me/"
-#    },{
-#        title: "David's Game",
-#        href: "https://www.ruoyaowu.com/"
-#    },{
-#        title: "DHong Say",
-#        href: "http://dhong.co"
-#    },{
-#        title: "尹峰以为",
-#        href: "http://ingf.github.io/"
-#    }
-#]
+# Friends
+friends: [
+    {
+        title: "崔洪健",
+        href: "https://www.williamchoe.com/"
+    }
+]
