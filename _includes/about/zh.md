@@ -6,7 +6,7 @@ Hi，我是陈铭杰，[东北大学](http://www.neu.edu.cn/)软件学院在读�
 
 目前的物理活动范围主要在宁波，分身日常出没于[博客](https://MessiahChen.github.io)、[微博](https://weibo.com/MichaelChen1999)、[知乎](https://www.zhihu.com/people/MichaelChen1999)、[Github](https://github.com/huxpro)、[码云](https://gitee.com/michaelchen1999)。
 
-戳这里看[个人简历](https://github.com/MessiahChen/MessiahChen.github.io/blob/master/_doc/MingjieChen%E4%B8%AD%E6%96%87%E7%AE%80%E5%8E%86.pdf)
+戳这里看[个人简历](https://pdf.maitube.com/pdf/?e=agyzrNTZd28I6a)
 
 <!--
 ##### [我的编程语言可视化 (WIP 🚧)](https://huangxuan.me/2020/05/05/pl-chart/)

@@ -7,8 +7,7 @@ I have spent part of my life in Ningbo, Shenyang, Raleigh(NC) and San Fransisco.
 
 I have visited many cities in the world. I can speak Mandarin, English, Japanes(N3) and a little bit Korean and Cantonese.
 
-[Resume](https://github.com/MessiahChen/MessiahChen.github.io/blob/master/_doc/MingjieChen%E8%8B%B1%E6%96%87%E7%AE%80%E5%8E%86.pdf)
-of Mingjie Chen
+[Resume](https://pdf.maitube.com/pdf/?e=agq05GBYhYCvwa) of Mingjie Chen
 
 <!--
 ##### [My PL Spectrum (WIP 🚧)](https://huangxuan.me/2020/05/05/pl-chart/)
