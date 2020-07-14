@@ -5,7 +5,7 @@ header-img: img/home-mc-bg.jpg
 email: echo TWljaGFlbF9DaGVuX0NTQGZveG1haWwuY29t | base64 -D
 description: "Description"
 keyword: "陈铭杰，Michael Chen, Mingjie Chen"
-url: "https://messiahchen.github.io"              # your host, for absolute URL
+url: "https://michaelchen.xyz"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
