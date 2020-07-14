@@ -105,6 +105,10 @@ page-mathjax: false
 # Friends
 friends: [
     {
+        title: "李昂",
+        href: "https://portfolio.lalxyy.me/"
+    },
+    {
         title: "崔洪健",
         href: "https://www.williamchoe.com/"
     }
