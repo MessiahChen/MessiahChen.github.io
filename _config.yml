@@ -64,7 +64,7 @@ kramdown:
 disqus_username: MichaelChen1999
 
 # Netease settings
-netease_comment: false
+netease_comment: true
 
 
 
