@@ -6,6 +6,8 @@ Hi，我是陈铭杰，[东北大学](http://www.neu.edu.cn/)软件学院在读�
 
 目前的物理活动范围主要在宁波，分身日常出没于[博客](https://MessiahChen.github.io)、[知乎](https://www.zhihu.com/people/MichaelChen1999)、[Github](https://github.com/MessiahChen)、[码云](https://gitee.com/michaelchen1999)、[微博](https://weibo.com/MichaelChen1999)。
 
+个人邮箱：echo TWljaGFlbF9DaGVuX0NTQGZveG1haWwuY29t | base64 -D
+
 戳这里看[个人简历](https://pdf.maitube.com/pdf/?e=agyzrNTZd28I6a)
 
 <!--
