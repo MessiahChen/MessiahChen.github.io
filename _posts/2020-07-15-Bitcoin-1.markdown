@@ -1,5 +1,4 @@
 ```
----
 layout:     post
 title:      "Bitcoin"
 subtitle:   "Bitcoin: A Peer-to-Peer Electronic Cash System 翻译"
@@ -11,7 +10,6 @@ tags:
     - 区块链
     - 比特币
     - 翻译
----
 ```
 
 # <center>**比特币：一种点对点电子现金系统**</center>
