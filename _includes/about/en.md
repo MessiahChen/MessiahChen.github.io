@@ -7,10 +7,11 @@ I have spent part of my life in Ningbo, Shenyang, Raleigh(NC) and San Fransisco.
 
 I have visited many cities in the world. I can speak Mandarin, English, Japanes(N3) and a little bit Korean and Cantonese.
 
-E-mail: echo TWljaGFlbF9DaGVuX0NTQGZveG1haWwuY29t | base64 -D
+E-mail: echo TWljaGFlbF9DaGVuX0NTQGZveG1haWwuY29t \| base64 -D
 
 [Resume](https://pdf.maitube.com/pdf/?e=agq05GBYhYCvwa) of Mingjie Chen
 
+---
 <!--
 ##### [My PL Spectrum (WIP 🚧)](https://huangxuan.me/2020/05/05/pl-chart/)
 
