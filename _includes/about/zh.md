@@ -8,8 +8,6 @@ Hi，我是陈铭杰，[东北大学](http://www.neu.edu.cn/)软件学院在读�
 
 个人邮箱：echo TWljaGFlbF9DaGVuX0NTQGZveG1haWwuY29t \| base64 -D
 
-测试
-
 戳这里看[个人简历](https://pdf.maitube.com/pdf/?e=agyzrNTZd28I6a)
 
 ---
