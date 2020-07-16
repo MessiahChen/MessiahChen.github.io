@@ -1,12 +1,14 @@
 > 像青草一样呼吸
 
-Hi，我是陈铭杰，[东北大学](http://www.neu.edu.cn/)软件学院在读本科生，曾去往[加州大学伯克利分校](https://www.berkeley.edu/)交流过一个学期。在宁波、沈阳、北卡罗来纳州和旧金山湾区生活过。
+Hi，我是陈铭杰，[东北大学](http://www.neu.edu.cn/)软件学院在读本科生，曾在[加州大学伯克利分校](https://www.berkeley.edu/)交流过一个学期。在宁波、沈阳、北卡罗来纳州和旧金山湾区生活过。足迹遍布日本、香港、美国。
 
 除了英语，我还会日语（N3）和一点点的粤语、韩语。
 
 目前的物理活动范围主要在宁波，分身日常出没于[博客](https://MessiahChen.github.io)、[知乎](https://www.zhihu.com/people/MichaelChen1999)、[Github](https://github.com/MessiahChen)、[码云](https://gitee.com/michaelchen1999)、[微博](https://weibo.com/MichaelChen1999)。
 
 个人邮箱：echo TWljaGFlbF9DaGVuX0NTQGZveG1haWwuY29t \| base64 -D
+
+测试
 
 戳这里看[个人简历](https://pdf.maitube.com/pdf/?e=agyzrNTZd28I6a)
 

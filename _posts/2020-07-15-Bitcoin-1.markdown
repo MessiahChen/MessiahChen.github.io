@@ -5,6 +5,7 @@ subtitle:   "\"Bitcoin: A Peer-to-Peer Electronic Cash System 翻译\""
 date:       2020-07-15 20:00:00
 author:     "MC"
 header-img: "img/post-bg-bitcoin-1.jpg"
+mathjax: true
 catalog: true
 tags:
     - 翻译
@@ -34,11 +35,11 @@ tags:
 
 　　问题当然是受款人无法证实其中一个拥有者有没有双重花费这个硬币。一个常见的解决方案是引入一个可信的中央机构或者是造币厂(mint)，它检查每一笔交易是否存在双重支出。每次交易后，必须将硬币归还造币厂来发行新硬币，只有直接从造币厂发行的硬币才可被证实为没有被重复使用。这个解决方案的问题是，整个货币体系的命运取决于运营铸币厂的公司，每笔交易都必须经过它们，就像银行一样。
 
-　　我们需要一种让收款人知道这个币之前的所有者未签署任何较早交易的方法。就我们的目的而言，最早的交易对我们来说有用，所以我们不在乎这之后的双重花费的尝试。确认没有交易有遗漏的唯一方法是了解所有交易。在以铸币厂为基础的模型中，铸币厂知道所有的交易，并决定哪个交易最先到达。为了在没有可信方的情况下实现这一点，交易必须公开宣布[[1]](#r1)，我们需要一个系统，让参与者就其接收顺序的单一历史达成一致。受款人需要证明在每次交易时，大多数节点都同意它是第一次收到的。
+　　我们需要一种让收款人知道这个币之前的所有者未签署任何较早交易的方法。就我们的目的而言，最早的交易对我们来说有用，所以我们不在乎这之后的双重花费的尝试。确认没有交易有遗漏的唯一方法是了解所有交易。在以铸币厂为基础的模型中，铸币厂知道所有的交易，并决定哪个交易最先到达。为了在没有可信方的情况下实现这一点，交易必须公开宣布<sup>[[1]](#r1)</sup>，我们需要一个系统，让参与者就其接收顺序的单一历史达成一致。受款人需要证明在每次交易时，大多数节点都同意它是第一次收到的。
 
 # 3. 时间戳服务器 (Timestamp Server)
 
-　　我们提出的解决方案从时间戳服务器开始。时间戳服务器的工作原理是获取要加时间戳的项目块的哈希值并广泛地发布该哈希值，例如在报纸或Usenet帖子中[[2-5]](#r2)。显然，为了进入散列，时间戳证明数据必须在当时已经存在。每个时间戳在其散列中包括前一个时间戳，形成一个链，每个附加的时间戳都加强前面的时间戳。
+　　我们提出的解决方案从时间戳服务器开始。时间戳服务器的工作原理是获取要加时间戳的项目块的哈希值并广泛地发布该哈希值，例如在报纸或Usenet帖子中<sup>[[2-5]](#r2)</sup>。显然，为了进入散列，时间戳证明数据必须在当时已经存在。每个时间戳在其散列中包括前一个时间戳，形成一个链，每个附加的时间戳都加强前面的时间戳。
 
 ![img](/img/in-post/post-bitcoin-1/bitcoin-2.png)
 
@@ -192,28 +193,16 @@ P<0.001 q=0.10 z=5 q=0.15 z=8 q=0.20 z=11 q=0.25 z=15 q=0.30 z=24 q=0.35 z=41 q=
 
 <span id="r1">[1]  W. Dai, "b-money," http://www.weidai.com/bmoney.txt, 1998.</span>
 
-<span id="r2">[2]  H. Massias, X.S. Avila, and J.-J. Quisquater, "Design of a secure timestamping service with minimal</span>
+<span id="r2">[2]  H. Massias, X.S. Avila, and J.-J. Quisquater, "Design of a secure timestamping service with minimal trust requirements," In *20th Symposium on Information Theory in the Benelux*, May 1999.</span>
 
-trust requirements," In *20th Symposium on Information Theory in the Benelux*, May 1999.
+[3]  S. Haber, W.S. Stornetta, "How to time-stamp a digital document," In *Journal of Cryptology*, vol 3, no2, pages 99-111, 1991.
 
-[3]  S. Haber, W.S. Stornetta, "How to time-stamp a digital document," In *Journal of Cryptology*, vol 3, no
+[4]  D. Bayer, S. Haber, W.S. Stornetta, "Improving the efficiency and reliability of digital time-stamping," In *Sequences II: Methods in Communication, Security and Computer Science*, pages 329-334, 1993.
 
-2, pages 99-111, 1991.
+[5]  S. Haber, W.S. Stornetta, "Secure names for bit-strings," In *Proceedings of the 4th ACM Conference* on Computer and Communications Security*, pages 28-35, April 1997.
 
-[4]  D. Bayer, S. Haber, W.S. Stornetta, "Improving the efficiency and reliability of digital time-stamping,"
+[6]  A. Back, "Hashcash - a denial of service counter-measure,"http://www.hashcash.org/papers/hashcash.pdf, 2002.
 
-In *Sequences II: Methods in Communication, Security and Computer Science*, pages 329-334, 1993.
-
-[5]  S. Haber, W.S. Stornetta, "Secure names for bit-strings," In *Proceedings of the 4th ACM Conference*
-
-*on Computer and Communications Security*, pages 28-35, April 1997.
-
-[6]  A. Back, "Hashcash - a denial of service counter-measure,"
-
-http://www.hashcash.org/papers/hashcash.pdf, 2002.
-
-[7]  R.C. Merkle, "Protocols for public key cryptosystems," In *Proc. 1980 Symposium on Security and*
-
-*Privacy*, IEEE Computer Society, pages 122-133, April 1980.
+[7]  R.C. Merkle, "Protocols for public key cryptosystems," In *Proc. 1980 Symposium on Security and Privacy*, IEEE Computer Society, pages 122-133, April 1980.
 
 [8]  W. Feller, "An introduction to probability theory and its applications," 1957.
