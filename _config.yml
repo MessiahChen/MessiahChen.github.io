@@ -111,5 +111,10 @@ friends: [
     {
         title: "[William Choe]",
         href: "https://www.williamchoe.com/"
+    },
+    {
+      title: "[白]",
+      href: "https://forself.me"
     }
+
 ]
