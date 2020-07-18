@@ -5,6 +5,7 @@ subtitle:   "\"Bitcoin: A Peer-to-Peer Electronic Cash System 逐字翻译\""
 date:       2020-07-15 20:00:00
 author:     "MC"
 header-img: "img/post-bg-bitcoin-1.jpg"
+header-mask: 10%
 mathjax: true
 catalog: true
 tags:
