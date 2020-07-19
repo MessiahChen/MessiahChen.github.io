@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "「托福」写作のE-Rater"
-subtitle:   "\"托福写作E-Rater评分标准\""
+subtitle:   "托福写作E-Rater评分标准"
 date:       2020-07-19 21:30:00
 author:     "MC"
 header-img: "img/post-tofel.jpg"

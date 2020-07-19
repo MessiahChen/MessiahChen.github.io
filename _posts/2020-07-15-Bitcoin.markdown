@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "「翻译」Bitcoin"
-subtitle:   "\"Bitcoin: A Peer-to-Peer Electronic Cash System 逐字翻译\""
+subtitle:   "Bitcoin: A Peer-to-Peer Electronic Cash System 逐字翻译"
 date:       2020-07-15 20:00:00
 author:     "MC"
 header-img: "img/post-bg-bitcoin-1.jpg"
@@ -11,7 +11,6 @@ catalog: true
 tags:
     - 翻译
     - 区块链
-    - 比特币
 ---
 
 # <center>比特币：一种点对点电子现金系统</center>
