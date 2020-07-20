@@ -8,8 +8,8 @@ header-img: "img/post-tofel.jpg"
 mathjax: true
 catalog: true
 tags:
-    - 托福
-    - 笔记
+    - TOEFL
+    - Notes
 ---
 
 

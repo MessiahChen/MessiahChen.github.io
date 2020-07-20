@@ -10,8 +10,8 @@ mathjax: true
 catalog: true
 tags:
     - 翻译
-    - 算法
-    - 区块链
+    - Algorithm
+    - Block Chain
 ---
 
 > 原文地址：[Practical Byzantine Fault Tolerance](http://pmg.csail.mit.edu/papers/osdi99.pdf)

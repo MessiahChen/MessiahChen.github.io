@@ -7,7 +7,7 @@ author:     "MC"
 header-img: "img/post-bg-pink1.jpg"
 catalog: true
 tags:
-    - 生活
+    - Life
     - 始まる
 ---
 

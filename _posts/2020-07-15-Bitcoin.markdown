@@ -10,7 +10,7 @@ mathjax: true
 catalog: true
 tags:
     - 翻译
-    - 区块链
+    - Block Chain
 ---
 
 > 原文地址：[Bitcoin](https://bitcoin.org/bitcoin.pdf)
