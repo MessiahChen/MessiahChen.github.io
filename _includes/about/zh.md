@@ -9,6 +9,7 @@ Hi，我是陈铭杰，[东北大学](http://www.neu.edu.cn/)软件学院在读�
 个人邮箱：echo TWljaGFlbF9DaGVuX0NTQGZveG1haWwuY29t \| base64 -D
 
 戳这里看我的[简历](https://pdf.maitube.com/pdf/?e=agyzrNTZd28I6a)
+[测试](https://michaelchen.xyz/_doc/Ang_Li_s_CV_Rewrite.pdf)
 
 ---
 <!--
