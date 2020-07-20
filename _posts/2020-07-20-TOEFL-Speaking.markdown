@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "「托福」口语"
+title:      "「托福」口语（更新ing）"
 subtitle:   "改革后的托福口语"
 date:       2020-07-20 00:00:00
 author:     "MC"
@@ -38,4 +38,40 @@ tags:
    - 针对提问充分作答；
    - 答题展开顺畅连贯；
    - 应有细节尽量充分
+
+
+
+# 发音练习
+
+![img](/img/in-post/post-TOEFL/speaking-2.png)
+
+![img](/img/in-post/post-TOEFL/speaking-3.png)
+
+资源：
+
+- [Rachel's English](http://rachelsenglish.com/)
+
+- 斯坦福Andy: [网页](https://www.andykrieger.com/) [b站](https://www.bilibili.com/video/BV1pp411f7Qr?from=search&seid=12782775823804163909)
+
+
+
+# Task 1
+
+![img](/img/in-post/post-TOEFL/speaking-4.png)
+
+---
+
+![img](/img/in-post/post-TOEFL/speaking-5.png)
+
+![img](/img/in-post/post-TOEFL/speaking-6.png)
+
+![img](/img/in-post/post-TOEFL/speaking-7.png)
+
+![img](/img/in-post/post-TOEFL/speaking-8.png)
+
+![img](/img/in-post/post-TOEFL/speaking-9.png)
+
+![img](/img/in-post/post-TOEFL/speaking-10.png)
+
+
 

@@ -14,47 +14,43 @@ tags:
     - 区块链
 ---
 
+> 原文地址：[Practical Byzantine Fault Tolerance](http://pmg.csail.mit.edu/papers/osdi99.pdf)
+
 # <center>实用拜占庭容错</center>
 
 <center>Miguel Castro和Barbara Liskov<br>计算机科学实验室, <br>麻省理工学院, <br>马萨诸塞州剑桥市科技广场545号, MA 02139<br>{castro,liskov}@lcs.mit.edu</center>
 
 ## 摘要
 
-// TODO
+本文描述了一种新的能够容忍拜占庭错误的复制算法。我们相信，拜占庭容错算法在未来将变得越来越重要，因为恶意攻击和软件错误越来越普遍，并可能导致故障节点表现出不可预料(arbitrary)的行为。以前的算法假设的前提是一个同步系统(synchronous system)，或者速度太慢而不能在实际中使用，与它们不同，本文描述的算法是实用的：它可以在诸如因特网这样的异步环境中工作，并且包含了几个重要的优化，这些优化将以前算法的响应时间提高了一个数量级以上。我们使用我们的算法实现了一个拜占庭容错式的NFS服务，并对其性能进行了测试。结果表明，我们的服务只比标准的无复制NFS慢3%。
 
-本文描述了一种新的能够容忍拜占庭错误的复制算法。我们相信，拜占庭容错算法在未来将变得越来越重要，因为恶意攻击和软件错误越来越普遍，并可能导致故障节点表现出任意行为。以前的算法假设是一个同步系统，或者速度太慢而不能在实际中使用，本文描述的算法是实用的：它可以在诸如因特网这样的异步环境中工作，并且包含了几个重要的优化，这些优化将以前算法的响应时间提高了一个数量级以上。我们使用我们的算法实现了一个拜占庭式的容错NFS服务，并对其性能进行了测试。结果表明，我们的服务只比标准的无复制nfs慢3%。
+## 1 概述 Introduction
 
-## 1简介
+恶意攻击和软件错误越来越普遍。工业界和政府对在线信息服务的日益依赖使得恶意攻击更具吸引力，并使成功攻击的后果更加严重。此外，由于软件规模和复杂性的增长，软件错误的数量也在增加。由于恶意攻击和软件错误会导致故障节点表现出拜占庭式（即任意 arbitrary）行为，因此拜占庭式容错算法变得越来越重要。
 
-恶意攻击和软件错误越来越普遍。工业界和政府对在线信息服务的日益依赖使得恶意攻击更具吸引力，并使成功攻击的后果更加严重。此外，由于软件规模和复杂性的增长，软件错误的数量也在增加。由于恶意攻击和软件错误会导致故障节点表现出拜占庭式（即任意）行为，因此拜占庭式容错算法变得越来越重要。
+本文提出了一种新的、*实用*的状态机复制(state machine replication)算法[17,34]，它可以容忍拜占庭式错误。在总数n个复制品中最多$[\frac{n-1}{3}]$个同时发生故障的前提下，该算法可同时提供活动性和安全性。这意味着客户最终会收到对其请求的答复，并且根据线性化，这些答复是正确的[14,4]。该算法适用于诸如因特网这样的异步系统，它包含了一些重要的优化，使其能够高效地执行。
 
-本文提出了一种新的、实用的状态机复制算法[17,34]，它可以容忍拜占庭式错误。该算法在最大程度上提供了动态性和安全性![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image003.gif)1 总共有个副本同时出现故障。这意味着客户端最终会收到对其请求的答复，并且这些答复根据可分辨性进行更正[14，4]。该算法适用于诸如因特网这样的异步系统，它包含了一些重要的优化，使其能够高效地执行。
+在协议方面以及容忍拜占庭式错误的复制技术有大量的工作要（从[19]开始）。然而，大多数早期的工作（例如，[3，24，10]）要么涉及旨在证明理论可行性的技术，而这些技术效率太低，无法在实践中使用；要么假设同步，即依赖于消息延迟和处理速度的已知界限。最接近我们的系统Rampart[30]和SecureRing[16]的设计是实用的，但它们依赖同步性假设来保证正确性，这在恶意攻击的存在下是危险的。攻击者可以通过延迟非故障节点或它们之间的通信来危害服务的安全，直到它们被标记为故障并被排除在复制组之外。这样的拒绝服务攻击(denial-of-service attack)通常比获得对非故障节点的控制要容易得多
 
-在协议方面有大量的工作要做
+我们的算法不易受到这种类型的攻击，因为它不依赖同步性来保证安全性。此外，如第7节所述，它可以将Rampart和SecureRing的性能提高一个数量级以上。它只使用一个消息往返来执行只读操作，使用两个消息往返来执行读写操作。此外，它在正常操作期间使用基于消息身份验证代码(message authentication codes)的有效身份验证方案；公钥密码术被称为Rampart中的主要延迟(latency)[29]和吞吐量(throughput)[22]瓶颈，而它仅在出现故障时才被使用。
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image005.jpg)这项研究得到了DARPaunder合同DABT6395-C-005的部分支持，由陆军瓦丘卡堡进行监测，根据合同F30602-98-1-0237，由空军研究实验室进行监测，部分由亚普拉西斯公司支持第二十一届联谊会。
-
-以及容忍拜占庭式错误的复制技术（从[19]开始）。然而，大多数早期的工作（例如，[3，24，10]）要么涉及旨在证明理论可行性的技术，这些技术效率太低，无法在实践中使用，要么假设同步，即依赖于消息延迟和处理速度的已知界限。最接近我们的系统Rampart[30]和SecureRing[16]的设计是实用的，但它们依赖同步性假设来保证正确性，这在恶意攻击的存在下是危险的。攻击者可以通过延迟非故障节点或它们之间的通信来危害服务的安全，直到它们被标记为故障并被排除在复制组之外。这样的ServiceAttack通常比获得对非故障节点的控制更容易。
-
-我们的算法不易受到这种类型的攻击，因为它不依赖同步性来保证安全性。此外，如第7节所述，它可以将护墙和固定的性能提高一个数量级以上。它只使用一个消息往返来执行只读操作，使用两个消息往返来执行读写操作。此外，它还使用了一种基于消息认证码的有效身份验证方案（normaloperation）；公钥密码术被称为Rampart中的主要延迟[29]和吞吐量[22]瓶颈，仅在出现故障时使用。
-
-为了评估我们的方法，我们实现了一个复制库，并用它来实现一个真正的服务：一个支持NFS协议的拜占庭式容错分布式文件系统。我们使用Andrew基准[15]来评估性能。结果表明，在正常情况下，我们的系统比digitalunix内核中的标准NFS守护进程慢了3%。
+为了评估我们的方法，我们实现了一个复制库(replication library)，并用它来实现一个真正的服务：一个支持NFS协议的拜占庭式容错分布式文件系统(Byzantine-fault-tolerant distributed file system)。我们使用Andrew benchmark[15]来评估性能。结果表明，在正常情况下，我们的系统比Digital Unix内核中的标准NFS守护进程慢了3%。
 
 因此，本文做出如下贡献：
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image006.gif)它描述了第一个状态机复制协议，它在asyn中正确地保存了拜占庭式错误-
+- 本文描述了第一个状态机复制协议，该协议可以在异步网络中正确地克服拜占庭式错误。。
 
-慢性网络。
+- 本文描述了许多重要的优化，这些优化使算法能够很好地执行，以便可以在实际系统中使用。
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image006.gif)它描述了许多重要的优化，这些优化使算法能够很好地执行，以便可以在实际系统中使用。
+- 本文描述了一个拜占庭容错分布式文件系统的实现。
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image006.gif)它描述了一个拜占庭容错分布式文件系统的实现。
+- 本文提供了量化复制技术成本的实验结果。
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image006.gif)它提供了量化复制技术成本的实验结果。
+本文的其余部分安排如下。我们首先描述我们的系统模型，包括我们的失败假设。第3节描述了本算法解决的问题并陈述了正确性条件。第4节描述了算法，第5节描述了一些重要的优化。第6节描述了我们的复制库以及我们如何使用它来实现一个拜占庭式容错NFS。第7节介绍了我们的实验结果。第8节讨论相关工作。最后，我们总结了我们已经完成的工作，并讨论了未来的研究方向。
 
-论文的其余部分安排如下。我们首先描述我们的系统模型，包括我们的失败假设。第3节描述了由算法和状态直接条件解决的问题。第4节描述了算法，第5节描述了一些重要的优化。第6节描述了我们的复制库以及我们如何使用它来实现一个拜占庭式容错NFS。第7节介绍了我们的实验结果。第八节讨论相关工作。最后，我们总结了我们已经完成的工作，并讨论了未来的研究方向。
+## 2 系统模型
 
-## 2系统模型
+// TODO
 
 我们假设一个异步分布式系统，其中节点通过网络连接。网络可能无法传递消息、延迟消息、复制消息或传递消息时出错。
 
@@ -427,4 +423,78 @@ Rampart和SecureRing都必须从组中排除有故障的副本才能进行（例
 
 我们要感谢Atul Adya，Chandrasekhar Boyapati，NancyLynch，SapeMullender，AndrewMyers，LiubaShrira，以及所有推荐人对本文草案的意见。
 
-## 工具书类
+## 引用 Reference
+
+[1]  M. Bellare and D. Micciancio. A New Paradigm for Collision- free Hashing: Incrementality at Reduced Cost. In *Advances in Cryptology – Eurocrypt 97*, 1997.
+
+[2]  G. Bracha and S. Toueg. Asynchronous Consensus and Broadcast Protocols. *Journal of the ACM*, 32(4), 1995.
+
+[3]  R. Canneti and T. Rabin. Optimal Asynchronous Byzantine Agreement. Technical Report #92-15, Computer Science Department, Hebrew University, 1992.
+
+[4]  M. Castro and B. Liskov. A Correctness Proof for a Practi- cal Byzantine-Fault-Tolerant Replication Algorithm. Technical Memo MIT/LCS/TM-590, MIT Laboratory for Computer Sci- ence, 1999.
+
+[5]  M. Castro and B. Liskov. Authenticated Byzantine Fault Tolerance Without Public-Key Cryptography. Technical Memo MIT/LCS/TM-589, MIT Laboratory for Computer Science, 1999.
+
+[6]  F.Cristian,H.Aghili,H.Strong,andD.Dolev.AtomicBroadcast: From Simple Message Diffusion to Byzantine Agreement. In *International Conference on Fault Tolerant Computing*, 1985.
+
+[7]  S. Deering and D. Cheriton. Multicast Routing in Datagram Internetworks and Extended LANs. *ACM Transactions on Computer Systems*, 8(2), 1990.
+
+[8]  H. Dobbertin. The Status of MD5 After a Recent Attack. *RSA Laboratories’ CryptoBytes*, 2(2), 1996.
+
+[9]  M. Fischer, N. Lynch, and M. Paterson. Impossibility of Distributed Consensus With One Faulty Process. *Journal of the ACM*, 32(2), 1985.
+
+[10]  J. Garay and Y. Moses. Fully Polynomial Byzantine Agreement for n>3t Processors in t+1 Rounds. *SIAM Journal of Computing*, 27(1), 1998.
+
+[11]  D.GawlickandD.Kinkade.VarietiesofConcurrencyControlin IMS/VS Fast Path. *Database Engineering*, 8(2), 1985.
+
+[12]  D. Gifford. Weighted Voting for Replicated Data. In *Symposium on Operating Systems Principles*, 1979.
+
+[13]  M. Herlihy and J. Tygar. How to make replicated data secure. *Advances in Cryptology (LNCS 293)*, 1988.
+
+[14]  M. Herlihy and J. Wing. Axioms for Concurrent Objects. In *ACM Symposium on Principles of Programming Languages*, 1987.
+
+[15]  J.Howardetal.Scaleandperformanceinadistributedfilesystem. *ACM Transactions on Computer Systems*, 6(1), 1988.
+
+[16]  K. Kihlstrom, L. Moser, and P. Melliar-Smith. The SecureRing Protocols for Securing Group Communication. In *Hawaii International Conference on System Sciences*, 1998.
+
+[17]  L. Lamport. Time, Clocks, and the Ordering of Events in a Distributed System. *Commun. ACM*, 21(7), 1978.
+
+[18]  L. Lamport. The Part-Time Parliament. Technical Report 49, DEC Systems Research Center, 1989.
+
+[19]  L. Lamport, R. Shostak, and M. Pease. The Byzantine Generals Problem. *ACM Transactions on Programming Languages and Systems*, 4(3), 1982.
+
+[20]  B. Liskov et al. Replication in the Harp File System. In *ACM Symposium on Operating System Principles*, 1991.
+
+[21]  N.Lynch.*DistributedAlgorithms*.MorganKaufmannPublishers, 1996.
+
+[22]  D. Malkhi and M. Reiter. A High-Throughput Secure Reliable Multicast Protocol. In *Computer Security Foundations Workshop*, 1996.
+
+[23]  D. Malkhi and M. Reiter. Byzantine Quorum Systems. In *ACM Symposium on Theory of Computing*, 1997.
+
+[24]  D. Malkhi and M. Reiter. Unreliable Intrusion Detection in Distributed Computations. In *Computer Security Foundations Workshop*, 1997.
+
+[25]  D. Malkhi and M. Reiter. Secure and Scalable Replication in Phalanx. In *IEEE Symposium on Reliable Distributed Systems*, 1998.
+
+[26]  B.OkiandB.Liskov.ViewstampedReplication:ANewPrimary Copy Method to Support Highly-Available Distributed Systems. In *ACM Symposium on Principles of Distributed Computing*, 1988.
+
+[27]  B. Preneel and P. Oorschot. MDx-MAC and Building Fast MACs from Hash Functions. In *Crypto 95*, 1995.
+
+[28]  C. Pu, A. Black, C. Cowan, and J. Walpole. A Specialization Toolkit to Increase the Diversity of Operating Systems. In *ICMAS Workshop on Immunity-Based Systems*, 1996.
+
+[29]  M. Reiter. Secure Agreement Protocols. In *ACM Conference on Computer and Communication Security*, 1994.
+
+[30]  M. Reiter. The Rampart Toolkit for Building High-Integrity Services. *Theory and Practice in Distributed Systems (LNCS 938)*, 1995.
+
+[31]  M. Reiter. A Secure Group Membership Protocol. *IEEE Transactions on Software Engineering*, 22(1), 1996.
+
+[32]  R. Rivest. The MD5 Message-Digest Algorithm. Internet RFC- 1321, 1992.
+
+[33]  R. Rivest, A. Shamir, and L. Adleman. A Method for Obtaining Digital Signatures and Public-Key Cryptosystems. *Communications of the ACM*, 21(2), 1978.
+
+[34]  F. Schneider. Implementing Fault-Tolerant Services Using The State Machine Approach: A Tutorial. *ACM Computing Surveys*, 22(4), 1990.
+
+[35]  A. Shamir. How to share a secret. *Communications of the ACM*, 22(11), 1979.
+
+[36]  G. Tsudik. Message Authentication with One-Way Hash Functions. *ACM Computer Communications Review*, 22(5), 1992.
+
+[37]  M. Wiener. Performance Comparison of Public-Key Cryptosys- tems. *RSA Laboratories’ CryptoBytes*, 4(1), 1998.

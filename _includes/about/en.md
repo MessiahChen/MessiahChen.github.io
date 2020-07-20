@@ -9,7 +9,7 @@ I have visited many cities in the world. I can speak Mandarin, English, Japanes(
 
 E-mail: echo TWljaGFlbF9DaGVuX0NTQGZveG1haWwuY29t \| base64 -D
 
-[Resume](https://pdf.maitube.com/pdf/?e=agq05GBYhYCvwa) of Mingjie Chen
+MC's [Resume](https://pdf.maitube.com/pdf/?e=agq05GBYhYCvwa)
 
 ---
 <!--
