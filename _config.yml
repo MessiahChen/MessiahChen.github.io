@@ -66,9 +66,19 @@ kramdown:
 # Netease settings
 netease_comment: false
 
+# valine
+valine_comment:
+  enable: true
+  # app_id
+  leancloud_appid: I3TqTs4Gki9fnQKXA2fnkDii-gzGzoHsz
+  # app_key
+  leancloud_appkey: KkAfl81x2sk5zYVpI0RHQYQD
+  # placeholde
+  placeholder: “Leave your comment here"
+
 # Gitalk
 gitalk:
-  enable: true                                              #是否开启Gitalk评论
+  enable: false                                              #是否开启Gitalk评论
   clientID: 4e18638fd009d713bb55                            #生成的clientID
   clientSecret: c8e52c093b232c89219a6dc9daec48346fadd28d    #生成的clientSecret
   repo: MessiahChen.github.io                               #仓库名称
