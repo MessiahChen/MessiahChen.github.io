@@ -3,7 +3,7 @@ title: MC Blog
 SEOTitle: MC Blog | 陈铭杰的博客
 header-img: img/home-mc-bg.jpg
 email: echo TWljaGFlbF9DaGVuX0NTQGZveG1haWwuY29t | base64 -D
-description: "Description"
+description: "\" Fiat Lux \""
 keyword: "陈铭杰，Michael Chen, Mingjie Chen"
 url: "https://michaelchen.xyz"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
@@ -68,13 +68,13 @@ netease_comment: false
 
 # Gitalk
 gitalk:
-  enable: true    #是否开启Gitalk评论
+  enable: true                                              #是否开启Gitalk评论
   clientID: 4e18638fd009d713bb55                            #生成的clientID
   clientSecret: c8e52c093b232c89219a6dc9daec48346fadd28d    #生成的clientSecret
-  repo: MessiahChen.github.io    #仓库名称
-  owner: MessiahChen    #github用户名
+  repo: MessiahChen.github.io                               #仓库名称
+  owner: MessiahChen                                        #github用户名
   admin: MessiahChen
-  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+  distractionFreeMode: true                                 #是否启用类似FB的阴影遮罩
 
 # Analytics settings
 
