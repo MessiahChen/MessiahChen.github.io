@@ -42,6 +42,44 @@ multilingual: true
         avatar: 'mp',
     });
 </script>
+<!-- 酷推机器人提醒 -->
+<script>
+    //检测推送 Skey替换
+    var pushLink = "https://push.xuthus.cc/send/a26a09402ee4f64b8b3aa988196238f9";
+    var ValineButton = document.getElementsByClassName("vsubmit vbtn")[0];
+    var content = "新评论:\n";
+
+    function send_valine() {
+        //获取元素信息
+        var pagename = document.title;
+        var wz = pagename.indexOf("|");
+        var res = pagename.substring(0, wz);
+        var pageurl = document.URL;
+        var ptime = new Date();
+        var vnick = document.getElementsByClassName("vnick vinput")[0].value;
+        var vmail = document.getElementsByClassName("vmail vinput")[0].value;
+        var vlink = document.getElementsByClassName("vlink vinput")[0].value;
+        var veditor = document.getElementsByClassName("veditor vinput")[0].value;
+        content =
+            content +
+            "昵称：" + vnick +
+            "\n邮箱：" + vmail +
+            "\n网站地址：" + vlink +
+            "\n当前页面：" + res +
+            "\n跳转链接：" + pageurl +
+            "\n评论时间" + ptime.toLocaleString() +
+            "\n评论内容：" + veditor + "\n";
+        var httpRequest = new XMLHttpRequest(); //第一步：创建需要的对象
+        httpRequest.open("POST", pushLink, true); //第二步：打开连接
+        httpRequest.setRequestHeader(
+            "Content-type",
+            "application/json"
+        ); //设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
+        httpRequest.send(content); //发送请求 将情头体写在send中
+    }
+
+    ValineButton.onclick = send_valine;
+</script>
 {% endif %}
 
 <!-- Gitalk 评论 start  -->
