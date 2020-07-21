@@ -50,15 +50,26 @@ layout: default
 
                 <!-- valine评论 -->
                 {% if site.valine_comment.enable %}
-<!--                <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>-->
-                <script src='//unpkg.com/valine@latest/dist/Valine.min.js'></script>
+                <script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+                <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+                <center><b>Comment Board</b></center><br>
+                <div id="valine_comment" class="fb_comments_container"></div>
                 <script>
                     new Valine({
-                        el: '#comments',
-                        app_id: '{{ site.valine_comment.leancloud_appid }}',   //这里变量的取值在网站配置文件里_config.yml
-                        app_key: '{{ site.valine_comment.leancloud_appkey }}', //这里变量的取值在网站配置文件里_config.yml
-                        placeholder:'{{ site.valine_comment.placeholder }}'    //这里变量的取值在网站配置文件里_config.yml
-                    });</script>
+                        av: AV,
+                        el: '#valine_comment',
+                        lang: 'en',
+                        // smiles_url: '/smiles',
+                        visitor: true,
+                        app_id: '{{ site.valine_comment.leancloud_appid }}',
+                        app_key: '{{ site.valine_comment.leancloud_appkey }}',
+                        // placeholder: '{{ site.valine_comment.placeholder }}',
+                        placeholder: 'Leave your comments here',
+                        avatar: 'mp',
+                    });
+                </script>
                 {% endif %}
 
                 <!--Gitalk评论start  -->

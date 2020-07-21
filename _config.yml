@@ -74,7 +74,7 @@ valine_comment:
   # app_key
   leancloud_appkey: KkAfl81x2sk5zYVpI0RHQYQD
   # placeholde
-  placeholder: “Leave your comment here"
+#  placeholder:
 
 # Gitalk
 gitalk:
