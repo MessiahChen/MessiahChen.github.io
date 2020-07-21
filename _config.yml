@@ -61,12 +61,20 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: MichaelChen1999
+#disqus_username: MichaelChen1999
 
 # Netease settings
 netease_comment: false
 
-
+# Gitalk
+gitalk:
+  enable: true    #是否开启Gitalk评论
+  clientID: 4e18638fd009d713bb55                            #生成的clientID
+  clientSecret: c8e52c093b232c89219a6dc9daec48346fadd28d    #生成的clientSecret
+  repo: MessiahChen.github.io    #仓库名称
+  owner: MessiahChen    #github用户名
+  admin: MessiahChen
+  distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 # Analytics settings
 
