@@ -75,3 +75,19 @@ tags:
 
 
 
+# Task 2
+
+![img](/img/in-post/post-TOEFL/speaking-11.png)
+
+![img](/img/in-post/post-TOEFL/speaking-12.png)
+
+![img](/img/in-post/post-TOEFL/speaking-13.png)
+
+![img](/img/in-post/post-TOEFL/speaking-14.png)
+
+**Step 4** 30秒准备工作：标出关键词，确认答题结构。
+
+![img](/img/in-post/post-TOEFL/speaking-15.png)
+
+![img](/img/in-post/post-TOEFL/speaking-16.png)
+
