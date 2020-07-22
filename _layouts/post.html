@@ -65,7 +65,7 @@ layout: default
                         app_id: '{{ site.valine_comment.leancloud_appid }}',
                         app_key: '{{ site.valine_comment.leancloud_appkey }}',
                         // placeholder: '{{ site.valine_comment.placeholder }}',
-                        placeholder: 'Leave your comments here',
+                        placeholder: 'Leave your comments here without registration!',
                         avatar: 'mp',
                     });
                 </script>
@@ -73,9 +73,9 @@ layout: default
                 <!-- 酷推机器人提醒 -->
                 <script>
                     //检测推送 Skey替换
-                    var pushLink = "https://push.xuthus.cc/send/a26a09402ee4f64b8b3aa988196238f9";
+                    var pushLink = "https://push.xuthus.cc/send/" + '{{ site.cool_push_key }}';
                     var ValineButton = document.getElementsByClassName("vsubmit vbtn")[0];
-                    var content = "新评论:\n";
+                    var content = "====新评论====\n";
 
                     function send_valine() {
                         //获取元素信息
@@ -96,7 +96,7 @@ layout: default
                             "\n当前页面：" + res +
                             "\n跳转链接：" + pageurl +
                             "\n评论时间" + ptime.toLocaleString() +
-                            "\n评论内容：" + veditor + "\n";
+                            "\n评论内容：" + veditor;
                         var httpRequest = new XMLHttpRequest(); //第一步：创建需要的对象
                         httpRequest.open("POST", pushLink, true); //第二步：打开连接
                         httpRequest.setRequestHeader(

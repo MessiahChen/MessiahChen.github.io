@@ -73,8 +73,11 @@ valine_comment:
   leancloud_appid: I3TqTs4Gki9fnQKXA2fnkDii-gzGzoHsz
   # app_key
   leancloud_appkey: KkAfl81x2sk5zYVpI0RHQYQD
-  # placeholde
-#  placeholder:
+  # placeholde (not work)
+  placeholder: Leave your comments here!!!
+
+# Cool Push Skey
+cool_push_key: a26a09402ee4f64b8b3aa988196238f9
 
 # Gitalk
 gitalk:
