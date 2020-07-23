@@ -5,7 +5,6 @@ subtitle:   "托福写作E-Rater评分标准"
 date:       2020-07-19 21:30:00
 author:     "MC"
 header-img: "img/post-tofel.jpg"
-mathjax: true
 catalog: true
 tags:
     - TOEFL
@@ -82,7 +81,7 @@ Tips：
 
 1. **调整了词长词频权重 4%**: 单词越长越生僻，得分越高<br>*如：buy-purchase*
 
-2. **增加了用词搭配权重 7%**: 两个词的正确搭配形式<br>*如*：heavy rain而不是thick rain*
+2. **增加了用词搭配权重 7%**: 两个词的正确搭配形式<br>*如：heavy rain而不是thick rain*
 
 
 

@@ -1,11 +1,10 @@
 ---
 layout:     post
-title:      "「托福」口语（更新ing）"
+title:      "「托福」口语"
 subtitle:   "改革后的托福口语"
 date:       2020-07-20 00:00:00
 author:     "MC"
 header-img: "img/post-tofel.jpg"
-mathjax: true
 catalog: true
 tags:
     - TOEFL
@@ -90,4 +89,58 @@ tags:
 ![img](/img/in-post/post-TOEFL/speaking-15.png)
 
 ![img](/img/in-post/post-TOEFL/speaking-16.png)
+
+
+
+# Task 3
+
+![img](/img/in-post/post-TOEFL/speaking-17.png)
+
+**Step 1** 阅读笔记：概括了解学术的原理、现象、概念。
+
+*注：阅读里的例子是用来理解专有名词，本身并不重要*
+
+优先对比和因果等逻辑，细节有能力再加
+
+![img](/img/in-post/post-TOEFL/speaking-18.png)
+
+**Step 4** 30秒准备工作：标出关键词，确认答题结构。关键术语努力记下发音。
+
+*Reading: 记学科定义概述*
+
+*Listening: 尽量记下所有具体例证细节*
+
+![img](/img/in-post/post-TOEFL/speaking-19.png)
+
+![img](/img/in-post/post-TOEFL/speaking-20.png)
+
+
+
+# Task 4
+
+![img](/img/in-post/post-TOEFL/speaking-21.png)
+
+**Step 2** 审题 要求归纳听力讲座的概念和展开细节
+
+![img](/img/in-post/post-TOEFL/speaking-22.png)
+
+![img](/img/in-post/post-TOEFL/speaking-23.png)
+
+![img](/img/in-post/post-TOEFL/speaking-24.png)
+
+
+
+## 常用句式
+
+![img](/img/in-post/post-TOEFL/speaking-25.png)
+
+![img](/img/in-post/post-TOEFL/speaking-26.png)
+
+![img](/img/in-post/post-TOEFL/speaking-27.png)
+
+
+
+## Appendix
+
+![img](/img/in-post/post-TOEFL/speaking-28.png)
 
