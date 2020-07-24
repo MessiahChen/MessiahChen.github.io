@@ -76,6 +76,8 @@ tags:
 
 ![img](/img/in-post/post-TOEFL/speaking-29.png)
 
+[三段式答题法](https://zhuanlan.zhihu.com/p/130225497)
+
 
 
 # Task 2
