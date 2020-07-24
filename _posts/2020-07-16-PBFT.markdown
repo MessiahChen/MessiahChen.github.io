@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "「翻译」PBFT算法（未完成）"
+title:      "「翻译」PBFT Algorithm（未完成）"
 subtitle:   "Practical Byzantine Fault Tolerance 逐字翻译"
 date:       2020-07-16 21:00:00
 author:     "MC"

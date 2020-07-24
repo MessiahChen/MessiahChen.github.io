@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "「托福」写作のE-Rater"
+title:      "「TOEFL」WritingのE-Rater"
 subtitle:   "托福写作E-Rater评分标准"
 date:       2020-07-19 21:30:00
 author:     "MC"
@@ -85,7 +85,7 @@ Tips：
 
 
 
-## 附录
+## Appendix
 
 <table>
   <tr>
@@ -114,4 +114,5 @@ Tips：
     <td><center>健康</center></td>
   </tr>
 </table>
+[TOEFL Writing](/2020/07/24/TOEFL-Writing)
 
