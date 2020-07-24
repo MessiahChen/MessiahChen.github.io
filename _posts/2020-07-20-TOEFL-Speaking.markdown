@@ -76,6 +76,8 @@ tags:
 
 ![img](/img/in-post/post-TOEFL/speaking-29.png)
 
+将抽象的概念具象化，举例子。三段论
+
 [三段式答题法](https://zhuanlan.zhihu.com/p/130225497)
 
 
