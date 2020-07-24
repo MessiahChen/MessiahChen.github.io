@@ -61,5 +61,9 @@ tags:
 
 ## Appendix
 
+分类：
+
+学校教育、家庭社会、商业经济、文化休闲、环境科技
+
 [TOEFL Writing E-Rater](/2020/07/20/TOFEL-Writing-E-Rater)
 
