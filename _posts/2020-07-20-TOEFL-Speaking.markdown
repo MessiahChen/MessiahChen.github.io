@@ -72,6 +72,10 @@ tags:
 
 ![img](/img/in-post/post-TOEFL/speaking-10.png)
 
+七大类话题：
+
+![img](/img/in-post/post-TOEFL/speaking-29.png)
+
 
 
 # Task 2

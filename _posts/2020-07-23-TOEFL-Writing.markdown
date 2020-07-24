@@ -17,7 +17,7 @@ tags:
 
 
 
-# 写作安排
+# 题型安排
 
 ![img](/img/in-post/post-TOEFL/writing-1.png)
 
