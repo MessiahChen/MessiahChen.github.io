@@ -1,5 +1,5 @@
 # Mingjie Chen's Blog
-> A blog of whatever I want to write.
+> A space where whatever I want to write.
 
 ## Local Preview Setup
 
@@ -17,3 +17,5 @@ $ bundle install
 $ bundle exec jekyll serve  # alternatively, npm start
 ```
 Now visit [localhost: 4000](127.0.0.1:4000) for preview.
+
+Powered by [Hux Blog](https://github.com/huxpro/huxpro.github.io)

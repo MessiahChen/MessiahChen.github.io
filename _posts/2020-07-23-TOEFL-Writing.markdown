@@ -57,6 +57,8 @@ tags:
 
 ![img](/img/in-post/post-TOEFL/writing-9.png)
 
+有时间的话把reading的观点和理由提一下
+
 
 
 ## Appendix
