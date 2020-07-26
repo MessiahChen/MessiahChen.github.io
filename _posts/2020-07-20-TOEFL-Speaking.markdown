@@ -136,6 +136,8 @@ tags:
 
 ![img](/img/in-post/post-TOEFL/speaking-24.png)
 
+把结构理出来再添细节
+
 
 
 ## 常用句式
