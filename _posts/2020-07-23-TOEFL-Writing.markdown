@@ -249,7 +249,7 @@ The article presents three solutions/measures/ways to P, all of which are questi
 
 学校教育、家庭社会、商业经济、文化休闲、环境科技
 
-[例证法的例子]((/assets/Writing/Example.pdf))
+[例证法的例子](/assets/Writing/Example.pdf)
 
 [TOEFL Writing E-Rater](/2020/07/20/TOFEL-Writing-E-Rater)
 
