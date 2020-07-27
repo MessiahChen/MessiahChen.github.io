@@ -13,7 +13,10 @@ tags:
 
 
 
-> 来源：[清北托福慕课](https://www.bilibili.com/video/BV1LW411v7Z6?p=5)
+> 来源：
+>
+> 1. [清北托福慕课](https://www.bilibili.com/video/BV1LW411v7Z6?p=5) 
+> 2. 万炜《笔尖上的托福》
 
 
 
@@ -49,6 +52,66 @@ tags:
 6. 演绎推理、归纳总结
 7. 引用论证/名人名言（不推荐）
 
+---
+
+独立写作分类：
+
+- 现象描述类（行为是否发生、是否存在）
+- 价值判断类（对其价值利弊进行判断，是否应该做、值得做，分析利弊）
+
+### 现象描述型
+
+列举出证据，为选择的现象找理由去解释其存在的原因，并举例。
+
+尝试寻找造成该现象发生或不发生的理由。思考话题中的相关参与对象，思考该对象具有什么样的特点，导致了该现象发生或不发生。
+
+### 价值判断型
+
+针对建议的否定：**不可行、无效、目标无意义、副作用、替代方案**
+
+思考的内容：
+
+1. 该行为可行吗，是否可以反驳？
+2. 该行为会带来什么后果，是否可以反驳？
+3. 该结果是好事还是坏事，是否可以反驳？
+4. 要实现该结果，是否有别的方案，是否可以反驳？
+
+写作时可以反驳别人对自己立场的攻击。
+
+### 特殊题型
+
+**涉及因果的题**：
+
+支持观点，可以把话题自带的理由当做一个附送的理由，自己补充其他理由。
+
+反对观点，可以把话题的理由当做对立观点的理由去反驳。
+
+**三选一的题：**
+
+让步反驳，有两个靶子可以反驳。先支持自己的理由，再将两个对手逐一打倒。
+
+### 没理由时怎么办
+
+1. 诉诸自身（不推荐）
+2. 分情况展开
+3. 直接举例
+4. 平衡展开（话题争论双方不互斥的情况下）
+
+### 如何展开
+
+两个基本原则：
+
+1. 让别人看不懂的东西需进一步改写、具体化（将抽象化为具体：例子、细节）
+2. 让别人不相信的东西需进一步证明、解释（要有可信度、说服力）
+
+建议：一、将重要的描述性语言用事实性语言替换；二、存在逻辑空白的因果关系时，一定要有合理的桥梁联系。
+
+- **诉诸自身**：具象化思维
+- **因果**：将因到果的步骤展开，使每一步都具有合理性
+- **对比**：拿参照物和主要谈论的对象进行比较，以突显讨论对象的特点
+- **列举**：并列多个例子或情况
+- **让步：**段内让步，思考对方会怎样反驳，使论证更严谨
+
 
 
 # Intergrated Writing
@@ -68,6 +131,79 @@ tags:
 ![img](/img/in-post/post-TOEFL/writing-9.png)
 
 有时间的话把reading的观点和理由提一下
+
+---
+
+听力部分对一个建议进行否定，有三种可能策略：
+
+1. 方案不可行，因为某些原因导致根本做不到；
+2. 方案无效，即并不能解决相应的问题；
+3. 方案虽可行且有效，但危害严重，副作用大过其正作用。
+
+分类：
+
+- **观点理由型文章：**抛出一个观点，几个理由支持这个观点。听力否定该观点并削弱理由对该观点的支持。
+- **现象解释型文章：**抛出一个现象/已知事实，事实本身不能反驳，几个解释解释造成这个现象的原因。听力说三个解释无法解释现象的发生。
+- **因果解决型文章：**抛出一个困难，提出几个方案。听力指出方案各自的缺陷。
+
+### 观点理由型
+
+view, claim, position; reasons/arguments/evidences
+
+观点C（Conclusion），理由P（Premise）
+
+针对每一个P，听力只有两种反驳策略：
+
+1. P是错的
+2. P不支持C，即就算P是对的，C也是错的，也即否定PC之间的逻辑关系
+
+开头段：
+
+The reading proposes three arguments to support that C, all of which are questioned in the lecture.
+
+反驳P本身：
+
+- Contrary to the reading, the lecturer simply does not agree that P, because...
+- The lecturer insists that ~P, because...
+- The lecturer simply does not agree with the reading's claim that P, because...
+
+反驳PC关系：
+
+- While the lecturer concedes that P, he/she still insists that ~C, because...
+- While the lecturer concedes that P, he/she does not believe that C, because...
+
+若P、C能被名词化：
+
+- Contrary to the reading, the lecturer does not believe that P suffices to overturn ~C/ prove C.
+- Contrary to the reading, the lecturer insists that P is compatible with ~C.
+
+### 现象解释型
+
+thoery, hypothesis, cause, explanation 
+
+事实F（Fact），解释E（Explanation）
+
+听力只能否定这三个解释，即E不能解释F，策略：
+
+1. E根本没发生
+2. E发生了，但不可能造成F
+
+开头段：
+
+The article presents three theories/hypotheses/explanations regarding F, all of which are challenged by the lecturer. 
+
+听力不同意某个解释：
+
+- The lecturer dismisses the possibility that E caused F, because...
+- The E hypothesis is dismissed by the lecturer because...
+- The lecturer does not believe that E is resonsible for F, because...
+
+E和F如果是句子：
+
+- The lecturer does not agree that the reason why F is that E, because...
+- The lecturer does not believe that it is because E that F, because...
+
+### 问题解决型
 
 
 

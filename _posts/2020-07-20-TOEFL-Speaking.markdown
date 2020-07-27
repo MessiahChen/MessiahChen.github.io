@@ -98,6 +98,10 @@ tags:
 
 ![img](/img/in-post/post-TOEFL/speaking-16.png)
 
+两个优点/一优一缺/两个选择的结果例子对比
+
+具化它
+
 
 
 # Task 3
