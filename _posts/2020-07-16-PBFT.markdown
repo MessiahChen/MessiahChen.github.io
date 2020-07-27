@@ -78,11 +78,11 @@ tags:
 
 // TODO
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image019.gif)我们的算法是状态机复制的一种形式[17，34]：服务被建模为在分布式系统中跨不同节点复制的状态机。每个状态机副本维护服务状态并实现服务操作。我们用0 1中的整数表示副本集并标识每个副本。为了简单起见，我们假设
+我们的算法是状态机复制的一种形式[17，34]：服务被建模为在分布式系统中跨不同节点复制的状态机。每个状态机副本维护服务状态并实现服务操作。我们用0 1中的整数表示副本集并标识每个副本。为了简单起见，我们假设
 
-3 1其中是可能出现故障的最大副本数；尽管可能有3个以上![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image014.gif)1个副本，额外的副本会降低性能（因为交换的消息越来越大），而不会提高恢复能力。
+3 1其中是可能出现故障的最大副本数；尽管可能有3个以上1个副本，额外的副本会降低性能（因为交换的消息越来越大），而不会提高恢复能力。
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image020.gif)复制副本在一系列称为视图的配置中移动。在视图中，一个副本是主副本，其他副本是备份。视图是连续编号的。视图的主视图是replica，其中mod是视图编号。当主服务器出现故障时，将执行视图更改。Viewstamped Replication[26]和Paxos[18]使用类似的方法来容忍良性故障（如第8节所述）
+复制副本在一系列称为视图的配置中移动。在视图中，一个副本是主副本，其他副本是备份。视图是连续编号的。视图的主视图是replica，其中mod是视图编号。当主服务器出现故障时，将执行视图更改。Viewstamped Replication[26]和Paxos[18]使用类似的方法来容忍良性故障（如第8节所述）
 
 算法的工作原理大致如下：
 
@@ -92,7 +92,7 @@ tags:
 
 \3.  副本执行请求并向客户端发送一个回复
 
-\4.  客户端等待![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image023.gif)1个来自不同副本的答复具有相同的结果；这是操作的结果。
+\4.  客户端等待1个来自不同副本的答复具有相同的结果；这是操作的结果。
 
 与所有的状态机复制技术一样[34]，我们对副本提出了两个要求：它们必须是确定性的（即，在给定状态和给定参数集下执行操作必须始终产生相同的结果），并且必须在相同的状态下启动。考虑到这两个需求，该算法通过保证所有非故障副本在失败的情况下都同意执行请求的总顺序来确保安全性。
 
@@ -100,13 +100,13 @@ tags:
 
 ### 4.1客户
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image024.gif)客户端通过发送请求![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image027.gif)向主服务器发送消息。时间戳用于确保客户端请求执行的精确语义。的请求的时间戳完全按顺序排列，这样以后的请求的时间戳比以前的请求高；例如，时间戳可以是发出请求时客户端本地时钟的值。
+客户端通过发送请求向主服务器发送消息。时间戳用于确保客户端请求执行的精确语义。的请求的时间戳完全按顺序排列，这样以后的请求的时间戳比以前的请求高；例如，时间戳可以是发出请求时客户端本地时钟的值。
 
 副本发送到客户端的每个消息都包含当前视图编号，从而允许客户端跟踪该视图，从而跟踪当前主视图。客户机使用点到点消息将请求发送到它认为是当前主服务器的位置。主要的原子多播请求使用下一节中描述的协议来调用备份。
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image028.gif)副本将对请求的答复直接发送到客户机。回复的格式为reply其中是当前视图编号，是相应请求的时间戳，是副本编号，是执行请求操作的结果。
+副本将对请求的答复直接发送到客户机。回复的格式为reply其中是当前视图编号，是相应请求的时间戳，是副本编号，是执行请求操作的结果。
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image030.gif)客户端等待![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image031.gif)在接受结果之前，1使用来自不同副本的有效签名和相同的和进行答复。这保证了结果是有效的，因为大多数副本可能是错误的。
+客户端等待在接受结果之前，1使用来自不同副本的有效签名和相同的和进行答复。这保证了结果是有效的，因为大多数副本可能是错误的。
 
 如果客户机没有很快收到回复，它会将请求广播到所有副本。如果请求已经被处理，副本只需重新发送应答；副本会记住它们发送给每个客户机的最后一条应答消息。否则，如果复制不是主副本，则它将请求中继到主副本。如果主服务器没有将请求多播到组，那么它最终将被足够多的副本怀疑有问题，从而导致视图更改。
 
@@ -116,49 +116,49 @@ tags:
 
 每个副本的状态包括服务的状态、包含副本已接受的消息的消息日志以及副本的当前视图。我们将在4.3节中描述如何截断日志。当主服务器接收到客户机请求时，它启动一个三阶段协议，以原子方式将请求多播到副本。主进程将立即启动协议，除非正在进行协议的消息数超过给定的最大值。在这种情况下，它缓冲请求。缓冲请求稍后作为一个组进行多播，以减少MessageTrafficandCPUoverHeadsUnderHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHeadHea。为了简单起见，我们在下面的描述中忽略了这种优化。
 
-这三个阶段是准备、准备和提交。pre-prepare和prepare阶段用于完全排序在同一视图中发送的请求，即使主视图建议对请求进行排序的主视图出现故障。prepare和commit阶段用于确保requeststhatcommitrateollyorderedacrossviews。在预准备阶段，主服务器为请求分配一个序列号，多播一个preprepre消息，并将其附加到所有备份中，并将该消息附加到其日志中。邮件的格式是![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image034.gif)预先准备![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image035.gif)，其中指示要在其中发送消息的视图，是客户端的请求消息，以及![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image036.gif)的摘要。
+这三个阶段是准备、准备和提交。pre-prepare和prepare阶段用于完全排序在同一视图中发送的请求，即使主视图建议对请求进行排序的主视图出现故障。prepare和commit阶段用于确保requeststhatcommitrateollyorderedacrossviews。在预准备阶段，主服务器为请求分配一个序列号，多播一个preprepre消息，并将其附加到所有备份中，并将该消息附加到其日志中。邮件的格式是预先准备，其中指示要在其中发送消息的视图，是客户端的请求消息，以及的摘要。
 
 请求不包括在预先准备的消息中，以使其保持较小。这一点很重要，因为预准备消息用于证明请求在视图更改中被分配了序列号。此外，它将协议解耦，以完全从协议中订购请求，将请求传输到副本；允许我们使用针对协议消息的小消息优化的传输和针对大请求的大消息优化的传输。
 
 备份接受提供的预准备消息：请求和预准备消息中的签名是正确的，并且是的摘要；它在视图中；它没有接受用于查看的预准备消息和包含不同摘要的序列号；预准备消息中的序列号在低水位线和高水位线，
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image039.gif).
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image040.gif)最后一个条件是通过选择一个非常大的序列号来防止有故障的主节点耗尽序列号的空间。我们讨论如何前进
+
+最后一个条件是通过选择一个非常大的序列号来防止有故障的主节点耗尽序列号的空间。我们讨论如何前进
 
 第4.3条。
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image041.gif)如果备份接受预准备![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image042.gif)消息，它通过多播a进入准备阶段
+如果备份接受预准备消息，它通过多播a进入准备阶段
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image043.gif)![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image044.gif)准备![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image045.gif)消息添加到所有其他副本，并将这两个消息添加到其日志中。否则，它什么也做不了。复制副本（包括主副本）接受准备消息并将其添加到其日志中，前提是它们的签名正确，它们的视图编号等于副本的当前视图，并且它们的序列号介于和之间。
+准备消息添加到所有其他副本，并将这两个消息添加到其日志中。否则，它什么也做不了。复制副本（包括主副本）接受准备消息并将其添加到其日志中，前提是它们的签名正确，它们的视图编号等于副本的当前视图，并且它们的序列号介于和之间。
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image046.gif)我们定义谓词prepared![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image047.gif)当且仅当复制副本已插入其日志时为真：请求、带有序列号的pre-pre-for视图和2从与pre-prepare匹配的不同备份进行准备。复制副本通过检查它们是否具有相同的视图、序列号和摘要来验证准备是否与预准备匹配。
+我们定义谓词prepared当且仅当复制副本已插入其日志时为真：请求、带有序列号的pre-pre-for视图和2从与pre-prepare匹配的不同备份进行准备。复制副本通过检查它们是否具有相同的视图、序列号和摘要来验证准备是否与预准备匹配。
 
 算法的pre-prepare和prepare阶段保证了一个视图中请求的总顺序是一致的。更准确地说，它们确保以下不变量：如果prepared为true，那么对于任何非错误复制（包括）和任何类似的复制，prepared都是false
 
 ​      . 这是真的，因为准备好了
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image048.gif)![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image049.gif)3 1意味着至少有1个非故障代表已经发送了带有序列号的pre-prepare或prepare-for-view。因此，对于prepared to true，这些副本中至少有一个需要发送两个冲突的准备（或者如果它是主要的，则为pre-prepares），即两个具有相同视图和序列号以及不同摘要的准备。但这是不可能的，因为复制品没有故障。最后，我们关于消息摘要强度的假设确保![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image050.gif)可以忽略不计。
+3 1意味着至少有1个非故障代表已经发送了带有序列号的pre-prepare或prepare-for-view。因此，对于prepared to true，这些副本中至少有一个需要发送两个冲突的准备（或者如果它是主要的，则为pre-prepares），即两个具有相同视图和序列号以及不同摘要的准备。但这是不可能的，因为复制品没有故障。最后，我们关于消息摘要强度的假设确保可以忽略不计。
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image051.gif)复制多播准备就绪后提交给其他副本。这将启动提交阶段。副本接受提交消息并将其插入日志中，前提是这些消息已正确签名，消息中的视图编号等于副本的当前视图，序列号为
+复制多播准备就绪后提交给其他副本。这将启动提交阶段。副本接受提交消息并将其插入日志中，前提是这些消息已正确签名，消息中的视图编号等于副本的当前视图，序列号为
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image043.gif)介于和之间
+介于和之间
 
 我们将committed和committed本地谓词定义如下：committed为true当且仅当prepared对于某些集合中的所有谓词都为true时
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image052.gif)1个无过失的替代品；以及承诺的本地
+1个无过失的替代品；以及承诺的本地
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image053.gif)当且仅当prepared为true且已接受来自与pre prepare for匹配的不同副本的21个提交（可能包括它自己的提交）；如果pre-prepare具有相同的视图、序列号和摘要，则commit与pre-prepare匹配。
+当且仅当prepared为true且已接受来自与pre prepare for匹配的不同副本的21个提交（可能包括它自己的提交）；如果pre-prepare具有相同的视图、序列号和摘要，则commit与pre-prepare匹配。
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image054.gif)提交阶段确保了以下不变式：如果某些非故障的提交位置为true，那么committed为true。这个不变量和第4.4节中描述的视图更改协议确保了非故障副本在本地提交的请求的序列号上一致，即使它们在每个副本上以不同的视图提交。此外，它确保在非故障副本上本地提交的任何请求都将在![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image055.gif)最终有1个或多个无故障副本。
+提交阶段确保了以下不变式：如果某些非故障的提交位置为true，那么committed为true。这个不变量和第4.4节中描述的视图更改协议确保了非故障副本在本地提交的请求的序列号上一致，即使它们在每个副本上以不同的视图提交。此外，它确保在非故障副本上本地提交的任何请求都将在最终有1个或多个无故障副本。
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image056.gif)每个副本在committed local为true后执行请求的操作，并且的状态反映了所有序列号较低的请求的顺序执行。这可以确保所有非故障副本以提供安全属性所需的相同顺序执行请求。在执行requestedoption之后，replicassenda replytotheclient。副本会丢弃其时间戳低于其发送给客户端的上一次响应中的时间戳的请求，以保证只使用一次语义。
+每个副本在committed local为true后执行请求的操作，并且的状态反映了所有序列号较低的请求的顺序执行。这可以确保所有非故障副本以提供安全属性所需的相同顺序执行请求。在执行requestedoption之后，replicassenda replytotheclient。副本会丢弃其时间戳低于其发送给客户端的上一次响应中的时间戳的请求，以保证只使用一次语义。
 
 我们不依赖有序的消息传递，因此复制副本有可能无序地提交请求。这并不重要，因为它会记录prepreprepare、prepare和commit消息，直到相应的请求可以执行为止。
 
 图1显示了在非主要故障的正常情况下算法的操作。复制是主要的，
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image057.gif)
+
 
 图1：正常情况下的操作
 
@@ -166,41 +166,41 @@ tags:
 
 本节讨论用于从日志中丢弃消息的机制。为了保持安全状态，消息mustbekeptinareplica的sloguntility知道它们所涉及的请求至少已被执行
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image055.gif)1个无故障副本，它可以在视图更改时向其他人证明这一点。此外，如果某些副本未命中由所有非故障副本丢弃的消息，则需要通过传输全部或部分服务状态使其保持最新状态。因此，副本还需要一些状态正确的证明。
+1个无故障副本，它可以在视图更改时向其他人证明这一点。此外，如果某些副本未命中由所有非故障副本丢弃的消息，则需要通过传输全部或部分服务状态使其保持最新状态。因此，副本还需要一些状态正确的证明。
 
 在执行每一个操作之后生成这些证明将是非常昂贵的。相反，当序列号可被某个常数（例如，100）整除的请求被执行时，它们被周期性地生成。我们将把执行这些请求所产生的状态称为检查点，并且我们将说，具有证据的检查点是一个稳定的检查点。
 
 副本可维护服务状态的所有逻辑副本：最新的稳定检查点、0个或更多不稳定的检查点以及当前状态。如第6.3节所述，写入时拷贝技术可用于减少存储额外状态副本的空间开销。
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image058.gif)![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image059.gif)检查点的正确性证明如下所示。当副本生成检查点时，它会多播一个消息检查点![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image060.gif)对于其他副本，其中是最后一个请求的序列号，其执行反映在状态中，是状态摘要。每个副本在其日志中收集检查点消息，直到它有21个检查点消息用于序列号，并且具有相同的摘要
+检查点的正确性证明如下所示。当副本生成检查点时，它会多播一个消息检查点对于其他副本，其中是最后一个请求的序列号，其执行反映在状态中，是状态摘要。每个副本在其日志中收集检查点消息，直到它有21个检查点消息用于序列号，并且具有相同的摘要
 
-由不同的副本签名（可能包括它自己的此类消息）。这两个![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image055.gif)1消息是检查点正确性的证明。
+由不同的副本签名（可能包括它自己的此类消息）。这两个1消息是检查点正确性的证明。
 
 带有证明的检查点变得稳定，副本将丢弃其日志中序列号小于或等于的所有预准备、准备和提交消息；它还将丢弃所有以前的检查点和
 
 检查点消息。
 
-计算证明是有效的，因为摘要可以使用第6.3节中讨论的增量密码计算[1]，并且很少生成证明。检查点协议用于推进低水位线和高水位线（这限制了接受哪些消息）。低水位线等于最后一个稳定检查点的序列号。高水位线![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image062.gif)，其大小足以使副本在等待检查点变得稳定时不会停止。例如，如果每100个请求执行检查点，则可能是200个。
+计算证明是有效的，因为摘要可以使用第6.3节中讨论的增量密码计算[1]，并且很少生成证明。检查点协议用于推进低水位线和高水位线（这限制了接受哪些消息）。低水位线等于最后一个稳定检查点的序列号。高水位线，其大小足以使副本在等待检查点变得稳定时不会停止。例如，如果每100个请求执行检查点，则可能是200个。
 
 ### 4.4视图更改
 
 视图更改协议允许系统在主节点发生故障时继续运行，从而提供了活跃性。视图更改由超时触发，超时可防止备份无限期地等待请求执行。备份正在等待RequestIFritReceivedAvailRequest，并且尚未执行它。备份在收到请求且计时器尚未运行时启动计时器。当计时器不再等待执行请求时，它会停止计时器，但如果此时计时器正在等待执行其他请求，则会重新启动计时器。
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image064.gif)![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image065.gif)![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image066.gif)如果视图中的备份计时器过期，则备份将启动视图更改以将系统移动到视图![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image067.gif)1它停止接受消息（检查点、视图更改和新视图消息除外），并多播一个view-change向所有副本发送1条消息。这是已知的最后一个稳定的检查点的序列号，是一组证明正确性的21个有效检查点消息，并且是一个包含每个请求的集合，该集合使用SequenceNumberHighThan准备。每套![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image070.gif)包含一个有效的预准备消息（没有相应的客户端消息）和2个匹配的有效准备消息，这些消息由具有相同视图、序列号和摘要的不同备份签名。
+如果视图中的备份计时器过期，则备份将启动视图更改以将系统移动到视图1它停止接受消息（检查点、视图更改和新视图消息除外），并多播一个view-change向所有副本发送1条消息。这是已知的最后一个稳定的检查点的序列号，是一组证明正确性的21个有效检查点消息，并且是一个包含每个请求的集合，该集合使用SequenceNumberHighThan准备。每套包含一个有效的预准备消息（没有相应的客户端消息）和2个匹配的有效准备消息，这些消息由具有相同视图、序列号和摘要的不同备份签名。
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image071.gif)当视图1的主视图从其他副本接收到视图1的2条有效的视图更改消息时，它将多播NEW-VIEW 1消息发送给所有其他副本，其中是一个集合，其中包含主副本接收到的有效viewchange消息以及的viewchange消息![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image072.gif)1 primarysent（或本应发送），是一组预先准备好的消息（没有附带的请求）。计算如下：
+当视图1的主视图从其他副本接收到视图1的2条有效的视图更改消息时，它将多播NEW-VIEW 1消息发送给所有其他副本，其中是一个集合，其中包含主副本接收到的有效viewchange消息以及的viewchange消息1 primarysent（或本应发送），是一组预先准备好的消息（没有附带的请求）。计算如下：
 
 \1.  主节点确定中最新稳定检查点的序列号min-s和中准备消息中的最高序列号max-s。
 
-\2.  ![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image075.gif)![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image076.gif)主服务器将为查看创建新的预准备邮件![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image077.gif)对于min-s和max-s之间的每个序列号，有两种情况：（1）在具有序列号的某个视图更改消息的组件中至少有一个集合，或者（2）没有这样的集合。在第一种情况下，主服务器创建一个新消息预先准备![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image078.gif)，其中是中视图编号最高的序列号的预准备消息中的请求摘要。在第二种情况下，它创建一个新的preprepre消息PRE-PREPARE![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image079.gif)，其中是一个特殊的null请求的摘要；null请求和其他请求一样通过协议，但是它的执行是不可操作的（Paxos[18]使用了类似的技术来填补空白）
+\2.  )主服务器将为查看创建新的预准备邮件对于min-s和max-s之间的每个序列号，有两种情况：（1）在具有序列号的某个视图更改消息的组件中至少有一个集合，或者（2）没有这样的集合。在第一种情况下，主服务器创建一个新消息预先准备，其中是中视图编号最高的序列号的预准备消息中的请求摘要。在第二种情况下，它创建一个新的preprepre消息PRE-PREPARE，其中是一个特殊的null请求的摘要；null请求和其他请求一样通过协议，但是它的执行是不可操作的（Paxos[18]使用了类似的技术来填补空白）
 
-接下来，主服务器将消息附加到其日志中。如果min-s大于其最新稳定检查点的序列号，则主节点还会在其日志中插入序列号为min-s的检查点的稳定性证明，并丢弃日志中的信息，如第4.3节所述。然后它进入视野![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image080.gif)1： 此时，它可以接受消息以供查看![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image081.gif) 1.
+接下来，主服务器将消息附加到其日志中。如果min-s大于其最新稳定检查点的序列号，则主节点还会在其日志中插入序列号为min-s的检查点的稳定性证明，并丢弃日志中的信息，如第4.3节所述。然后它进入视野1： 此时，它可以接受消息以供查看1.
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image082.gif)备份接受视图的新视图消息![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image081.gif)1如果签名正确，如果它包含的视图更改消息对视图1有效，并且集合正确，则通过执行与主服务器创建的计算类似的计算来验证的正确性。然后，它将新信息添加到其日志中，如主副本所述，将每个消息的“准备”多播到所有其他副本，将“准备”添加到其日志中，然后进入视图![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image081.gif) 1.
+备份接受视图的新视图消息1如果签名正确，如果它包含的视图更改消息对视图1有效，并且集合正确，则通过执行与主服务器创建的计算类似的计算来验证的正确性。然后，它将新信息添加到其日志中，如主副本所述，将每个消息的“准备”多播到所有其他副本，将“准备”添加到其日志中，然后进入视图1.
 
 此后，协议按第4.2节所述进行。副本为min-s和max-s之间的消息重做协议，但它们避免了重新执行客户端请求（通过使用它们存储的关于发送到每个客户端的最后一个回复的信息）。
 
-副本可能缺少某些请求消息或稳定的检查点（因为这些消息不会在newview消息中发送），它可以从另一个副本获取丢失的信息。例如，副本可以从其中一个副本获取丢失的检查点状态，该副本的检查点消息在其中验证了其正确性。因为![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image031.gif)其中1个副本是正确的，副本将始终获得或稍后经过认证的稳定检查点。我们可以通过划分状态并在每个分区上标记修改它的最后一个请求的序列号来避免发送整个检查点。要使副本保持最新，只需将它过期的分区发送给它，而不必发送整个检查点。
+副本可能缺少某些请求消息或稳定的检查点（因为这些消息不会在newview消息中发送），它可以从另一个副本获取丢失的信息。例如，副本可以从其中一个副本获取丢失的检查点状态，该副本的检查点消息在其中验证了其正确性。因为其中1个副本是正确的，副本将始终获得或稍后经过认证的稳定检查点。我们可以通过划分状态并在每个分区上标记修改它的最后一个请求的序列号来避免发送整个检查点。要使副本保持最新，只需将它过期的分区发送给它，而不必发送整个检查点。
 
 ### 4.5正确性
 
@@ -210,29 +210,29 @@ tags:
 
 如前所述，如果所有非故障副本都同意本地提交的请求的序列号，则该算法提供了安全性。
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image083.gif)在第4.2节中，我们展示了![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image047.gif)为true，对于任何非错误副本（包括）和![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image084.gif)就这样
+在第4.2节中，我们展示了为true，对于任何非错误副本（包括）和就这样
 
 . 这意味着两个非故障副本在两个副本的同一视图中本地提交的请求的序列号一致。
 
-视图更改协议确保非故障副本也同意在不同的副本上提交不同视图的请求序列号。只有在提交时，请求才会在无故障副本上本地提交，序列号在视图中可见![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image085.gif)是真的。这意味着至少包含
+视图更改协议确保非故障副本也同意在不同的副本上提交不同视图的请求序列号。只有在提交时，请求才会在无故障副本上本地提交，序列号在视图中可见是真的。这意味着至少包含
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image055.gif)1个无故障副本![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image047.gif)对于集合中的每个副本都为真。
+1个无故障副本对于集合中的每个副本都为真。
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image087.gif)![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image088.gif)![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image089.gif)如果没有接收到的新视图消息，则无故障副本将不接受预准备查看（因为只有在该点上，才能进入视图）。但是有没有正确的视图消息![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image090.gif)包含一组2个（共2个）1个副本中每个副本的正确视图更改消息。因为有31个副本，1 和2必须在至少一个没有故障的副本中相交s视图更改消息将确保在前一视图中准备的事实传播到后续视图，除非新视图消息包含一个具有稳定检查点且序列号大于的视图更改消息。在第一种情况下，算法使用相同的序列号和新的视图号对原子多播协议的三个阶段进行重做。这一点很重要，因为它可以防止在前一个视图中分配序列号的任何不同请求被提交。在第二种情况下，新视图中的任何副本都不会接受序列号小于的消息。在任何一种情况下，副本都将同意在本地使用序列号提交的请求。
+如果没有接收到的新视图消息，则无故障副本将不接受预准备查看（因为只有在该点上，才能进入视图）。但是有没有正确的视图消息包含一组2个（共2个）1个副本中每个副本的正确视图更改消息。因为有31个副本，1 和2必须在至少一个没有故障的副本中相交s视图更改消息将确保在前一视图中准备的事实传播到后续视图，除非新视图消息包含一个具有稳定检查点且序列号大于的视图更改消息。在第一种情况下，算法使用相同的序列号和新的视图号对原子多播协议的三个阶段进行重做。这一点很重要，因为它可以防止在前一个视图中分配序列号的任何不同请求被提交。在第二种情况下，新视图中的任何副本都不会接受序列号小于的消息。在任何一种情况下，副本都将同意在本地使用序列号提交的请求。
 
 #### 4.5.2活力
 
-为了提供活动性，如果副本无法执行请求，则必须将其移动到新视图。但重要的是，最大化的时间段至少有2![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image091.gif)1非故障副本在同一视图中，并确保这段时间在某些请求的操作执行之前递增。我们通过三种方式实现这些目标。
+为了提供活动性，如果副本无法执行请求，则必须将其移动到新视图。但重要的是，最大化的时间段至少有21非故障副本在同一视图中，并确保这段时间在某些请求的操作执行之前递增。我们通过三种方式实现这些目标。
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image092.gif)首先，为了避免启动aviewchangetoon，一个为视图多播视图更改消息的副本![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image093.gif)1等待2![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image055.gif)1视图更改视图1的消息，然后启动其计时器，使其在一段时间后过期。如果计时器在收到的有效新视图消息之前过期![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image094.gif)1或在新视图中执行以前未执行的请求之前，它会启动视图的视图更改![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image081.gif)但这次它会等2
+首先，为了避免启动aviewchangetoon，一个为视图多播视图更改消息的副本1等待21视图更改视图1的消息，然后启动其计时器，使其在一段时间后过期。如果计时器在收到的有效新视图消息之前过期1或在新视图中执行以前未执行的请求之前，它会启动视图的视图更改但这次它会等2
 
-开始视图更改之前![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image096.gif) 3.
+开始视图更改之前 3.
 
-第二，如果复制副本接收到![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image055.gif)如果它的另一个视图的更改时间比当前视图的更改时间还晚，则会阻止它从另一个视图中发送比当前视图更晚的更改消息1。
+第二，如果复制副本接收到如果它的另一个视图的更改时间比当前视图的更改时间还晚，则会阻止它从另一个视图中发送比当前视图更晚的更改消息1。
 
-第三，错误的副本无法通过强制频繁的视图更改来阻止进度。错误的复制副本不能通过发送视图更改消息来引起视图更改，因为只有在至少![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image091.gif)1复制副本发送视图更改消息，但当它是主副本时，它可能会导致视图更改（通过不发送消息或发送错误消息）。但是，由于主视图是副本，所以主视图不能再出错
+第三，错误的副本无法通过强制频繁的视图更改来阻止进度。错误的复制副本不能通过发送视图更改消息来引起视图更改，因为只有在至少1复制副本发送视图更改消息，但当它是主副本时，它可能会导致视图更改（通过不发送消息或发送错误消息）。但是，由于主视图是副本，所以主视图不能再出错
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image097.gif)比连续的观点。
+比连续的观点。
 
 这三种技术保证了活动性，除非消息延迟的增长速度无限快于超时时间，这在实际系统中是不可能的。
 
@@ -242,7 +242,7 @@ tags:
 
 如果主服务器独立地选择非确定性值，它将该值与相关的请求连接起来，并执行三阶段协议，以确保非故障副本同意请求值的序列号。这可以防止faultyprimary通过向不同的副本发送不同的值来防止副本状态发生变化。但是，faultyprimary可能会向所有副本发送相同的、不正确的值。因此，副本必须能够仅根据服务状态来确定该值是否正确（如果不正确，该怎么办）。
 
-此协议对于大多数服务（包括NFS）来说是足够的，但是偶尔副本必须参与选择值以满足服务规范。这可以通过在协议中添加一个额外的阶段来完成：主节点获取由备份提出的经过验证的值，连接2![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image055.gif)其中1个包含关联的请求，并启动级联消息的三阶段协议。副本通过2上的确定性计算选择值![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image055.gif)1值及其状态，例如取中值。在一般情况下，额外的相位可以被优化掉。例如，如果副本需要一个“足够接近”其本地时钟的值，那么当它们的时钟在某个增量内同步时，可以避免额外的相位。
+此协议对于大多数服务（包括NFS）来说是足够的，但是偶尔副本必须参与选择值以满足服务规范。这可以通过在协议中添加一个额外的阶段来完成：主节点获取由备份提出的经过验证的值，连接2其中1个包含关联的请求，并启动级联消息的三阶段协议。副本通过2上的确定性计算选择值1值及其状态，例如取中值。在一般情况下，额外的相位可以被优化掉。例如，如果副本需要一个“足够接近”其本地时钟的值，那么当它们的时钟在某个增量内同步时，可以避免额外的相位。
 
 ## 5个优化
 
@@ -252,11 +252,11 @@ tags:
 
 我们使用三种优化方法来降低通信成本。第一种方法避免发送大多数大的回复。客户机请求指定一个副本来发送结果；所有其他副本发送只包含结果摘要的答复。摘要允许客户机检查结果的正确性，从而大大减少了大答复的网络带宽消耗和CPU开销。如果客户机没有从指定的副本接收到正确的结果，它会像往常一样重新传输请求，请求所有副本发送完整的响应。
 
-第二个优化将操作调用的消息延迟数从5减少到4。当准备好的谓词为请求保留时，副本将暂时执行一个请求，它们的状态反映序列号较低的所有请求的执行情况，并且这些请求都已知已提交。执行请求后，副本向客户端发送临时响应。客户端等待2![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image098.gif)1个匹配的暂定答复。如果它接收到这么多，则保证请求最终提交。否则，客户机重新传输请求并等待![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image055.gif)1非暂定答复。
+第二个优化将操作调用的消息延迟数从5减少到4。当准备好的谓词为请求保留时，副本将暂时执行一个请求，它们的状态反映序列号较低的所有请求的执行情况，并且这些请求都已知已提交。执行请求后，副本向客户端发送临时响应。客户端等待21个匹配的暂定答复。如果它接收到这么多，则保证请求最终提交。否则，客户机重新传输请求并等待1非暂定答复。
 
 如果视图发生更改，并且被空请求替换，则暂时执行的请求可能会中止。在这种情况下，复制副本将其状态恢复为新视图消息中的最后一个稳定检查点或其最后一个检查点状态（取决于哪个检查点的序列号更高）。
 
-第三个优化改进了不修改服务状态的只读操作的性能。客户机将只读请求多播到所有副本。在检查请求是否经过正确的身份验证、客户端是否具有访问权限以及请求是否实际上是只读的之后，副本立即在其临时状态下执行请求。它们只在临时状态中反映的所有请求都已提交之后才发送答复；这是防止客户端观察到未提交状态所必需的。客户端等待2![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image031.gif)1个来自不同副本的答复结果相同。客户端可能无法收集2![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image014.gif)1如果同时写入影响结果的数据，则会做出此类答复；在这种情况下，在其重传计时器过期后，它将请求作为常规读写请求重新发送。
+第三个优化改进了不修改服务状态的只读操作的性能。客户机将只读请求多播到所有副本。在检查请求是否经过正确的身份验证、客户端是否具有访问权限以及请求是否实际上是只读的之后，副本立即在其临时状态下执行请求。它们只在临时状态中反映的所有请求都已提交之后才发送答复；这是防止客户端观察到未提交状态所必需的。客户端等待21个来自不同副本的答复结果相同。客户端可能无法收集21如果同时写入影响结果的数据，则会做出此类答复；在这种情况下，在其重传计时器过期后，它将请求作为常规读写请求重新发送。
 
 ### 5.2密码学
 
@@ -272,7 +272,7 @@ mac的计算速度比数字签名快三个数量级。例如，200MHz Pentium Pr
 
 验证验证器的时间是恒定的，但是生成验证器的时间随着副本的数量线性增长。这不是问题，因为我们不希望有大量的副本，而且MAC和数字签名计算之间存在巨大的性能差距。此外，我们高效地计算验证器；MD5应用于消息一次，结果上下文通过将MD5应用于相应的会话密钥来计算每个向量条目。例如，在具有37个副本的系统中（即，能够同时容忍12个故障的系统），验证器的计算速度仍然比1024位的moduleusrsa签名快两个数量级。
 
-身份验证器的大小随副本数量线性增长，但增长缓慢：等于30![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image100.gif)31 字节。身份验证器比具有1024位模数的RSA签名小![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image101.gif)13（即，能够承受多达4个同时故障的系统），我们期望在大多数配置中都是这样。
+身份验证器的大小随副本数量线性增长，但增长缓慢：等于3031 字节。身份验证器比具有1024位模数的RSA签名小13（即，能够承受多达4个同时故障的系统），我们期望在大多数配置中都是这样。
 
 ## 6实施
 
@@ -296,7 +296,7 @@ mac的计算速度比数字签名快三个数量级。例如，200MHz Pentium Pr
 
 Afilesystemexportedbythefault-tolerantNFSservice像任何常规NFS文件系统一样安装在客户机上。应用程序进程未经修改地运行，并通过内核中的NFS客户机与挂载的文件系统交互。我们依赖于用户级中继进程来协调标准NFS客户端和副本之间的通信。中继接收NFS协议请求，调用复制库的invoke过程，并将结果发送回NFS客户机。
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image103.gif)
+
 
 图2：复制的文件系统体系结构。
 
@@ -411,7 +411,7 @@ Andrew基准测试[15]模拟软件开发工作负载。它分为五个阶段：�
 
 Rampart和SecureRing都必须从组中排除有故障的副本才能进行（例如，删除有故障的主副本并选择新的主副本），并执行垃圾收集。它们依靠故障检测器来确定哪些复制品有问题。然而，在异步系统[21]中，故障检测器不可能准确，也就是说，它们可能会错误地将副本分类为故障。由于正确性要求少于13个组成员出错，错误分类可能会通过从组中删除一个非故障副本而损害正确性。这就打开了一条攻击之路：攻击者获得了对单个副本的控制权，但不会以任何可检测的方式更改其行为；然后，它会减慢正确的复制程序，并将这些副本之间的通信从组中排除。
 
-![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image105.gif)![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image106.gif)为了减少错误分类的概率，可以校准故障检测器来延迟将副本分类为故障。然而，为了使概率可以忽略不计，延迟必须非常大，这是不可取的。例如，如果主服务器实际发生故障，则在延迟过期之前，组将无法处理客户端请求。因为我们的算法不能排除复制。Phalanx[23，25]应用定额复制技术[12]在异步系统中实现拜占庭式容错。这项工作不提供通用状态机复制；相反，它提供了一个数据存储库，其中包含读写独立变量和获取锁的操作。它为读和写操作提供的语义比我们的算法要弱；我们可以实现访问任意数量的变量的任意操作，而要执行这些操作，就必须获取和释放锁。目前还没有公布的Phalanx的性能数据，但我们相信我们的算法更快，因为它在关键路径上的消息延迟更少，而且我们使用mac而不是公钥密码。Phalanx中的方法提供了改进可伸缩性的潜力；每个操作只由副本的一个子集处理。但是这种可伸缩性的方法代价很高：它需要4 1来容忍故障；每个副本需要一个状态副本；每个副本上的负载会随着（它是O 1）缓慢降低。
+为了减少错误分类的概率，可以校准故障检测器来延迟将副本分类为故障。然而，为了使概率可以忽略不计，延迟必须非常大，这是不可取的。例如，如果主服务器实际发生故障，则在延迟过期之前，组将无法处理客户端请求。因为我们的算法不能排除复制。Phalanx[23，25]应用定额复制技术[12]在异步系统中实现拜占庭式容错。这项工作不提供通用状态机复制；相反，它提供了一个数据存储库，其中包含读写独立变量和获取锁的操作。它为读和写操作提供的语义比我们的算法要弱；我们可以实现访问任意数量的变量的任意操作，而要执行这些操作，就必须获取和释放锁。目前还没有公布的Phalanx的性能数据，但我们相信我们的算法更快，因为它在关键路径上的消息延迟更少，而且我们使用mac而不是公钥密码。Phalanx中的方法提供了改进可伸缩性的潜力；每个操作只由副本的一个子集处理。但是这种可伸缩性的方法代价很高：它需要4 1来容忍故障；每个副本需要一个状态副本；每个副本上的负载会随着（它是O 1）缓慢降低。
 
 ## 9结论
 
@@ -421,7 +421,7 @@ Rampart和SecureRing都必须从组中排除有故障的副本才能进行（例
 
 拜占庭式容错算法在未来很重要的一个原因是，即使存在软件错误，它们也可以允许系统继续正常工作。并非所有的错误都是可生存的；我们的方法无法掩盖在所有副本上发生的软件错误。但是，它可以屏蔽在不同副本中独立发生的错误，包括不确定的软件错误，这些错误是最有问题和最持久的错误，因为它们最难检测到。事实上，我们在运行我们的系统时遇到了这样一个软件错误，尽管如此，我们的算法仍然能够继续正确运行。
 
-改进我们的系统还有很多工作要做。一个特别感兴趣的问题是减少实现我们的算法所需的资源量。只有当某个完整副本发生故障时，协议中才会涉及副本作为见证方，从而减少副本的数量。我们还认为，有可能将国家的副本数量减少到![img](https://fanyi-doc.baidu.com/doctrans/api/getmultimedia?fileToken=bf6f351fe94c03f9472b0d20a6d8bfff&name=image055.gif)但具体细节仍有待研究。
+改进我们的系统还有很多工作要做。一个特别感兴趣的问题是减少实现我们的算法所需的资源量。只有当某个完整副本发生故障时，协议中才会涉及副本作为见证方，从而减少副本的数量。我们还认为，有可能将国家的副本数量减少到但具体细节仍有待研究。
 
 ### 致谢
 
