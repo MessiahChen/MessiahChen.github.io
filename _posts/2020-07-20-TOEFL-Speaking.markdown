@@ -13,7 +13,10 @@ tags:
 
 
 
-> 来源：[清北托福慕课](https://www.bilibili.com/video/BV1rJ411J7qs?from=search&seid=16282066968677358598)
+> 来源：
+>
+> 1. [清北托福慕课](https://www.bilibili.com/video/BV1rJ411J7qs?from=search&seid=16282066968677358598)
+> 2. 李彦彬 《舌尖上的托福》
 
 
 
@@ -75,6 +78,21 @@ tags:
 七大类话题：
 
 ![img](/img/in-post/post-TOEFL/speaking-29.png)
+
+---
+
+理由：
+
+- 讲道理
+- 举例子
+- 作对比
+- 给数据
+
+三大理由：
+
+- Friends (Make Friends, Enhance Friendship)
+- Money (Make Money, Save Money, Economical)
+- Effeciency (Convenient, Simple, Save Time)
 
 将抽象的概念具象化，举例子。
 
