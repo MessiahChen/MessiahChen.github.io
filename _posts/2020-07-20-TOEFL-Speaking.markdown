@@ -96,6 +96,8 @@ tags:
 
 将抽象的概念具象化，举例子。
 
+两个优点/一优一缺/两个选择的结果例子对比，具化它
+
 [三段论式答题法](https://zhuanlan.zhihu.com/p/130225497)
 
 
@@ -115,10 +117,6 @@ tags:
 ![img](/img/in-post/post-TOEFL/speaking-15.png)
 
 ![img](/img/in-post/post-TOEFL/speaking-16.png)
-
-两个优点/一优一缺/两个选择的结果例子对比
-
-具化它
 
 
 
