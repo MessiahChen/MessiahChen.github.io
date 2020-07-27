@@ -205,6 +205,42 @@ E和F如果是句子：
 
 ### 问题解决型
 
+solutions, approaches, methods, strategies, measures, ways
+
+问题P（Problem）解决方案S（Solution）
+
+建议的形式：
+
+- Should / must / need / ought to ...
+- You'd better ...
+- It's good for ... to ...
+- If ... , ...
+- One way to ... is to ...
+
+否定阅读建议的方案：
+
+1. S不可行，根本没有能力执行
+2. S无效，不能解决P
+3. S的副作用明显
+
+开头段：
+
+The article presents three solutions/measures/ways to P, all of which are questioned in the lecture. 
+
+否定可行性：
+
+- The lecturer does not believe the proposal to be practical, because ...
+- The lecturer claims that the solution is impractical, because ...
+
+否定有效性：
+
+- The lecturer does not believe that the proposal can effectively ... , because ...
+- The lecturer argues that the proposal will not effectively ... , because ...
+
+提出副作用：
+
+- While the proposal might effectively ... , the lecturer argues that it would generate a bigger problem.
+
 
 
 ## Appendix
