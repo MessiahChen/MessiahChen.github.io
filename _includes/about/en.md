@@ -3,9 +3,10 @@
 Hi, I'm Mingjie(Michael) Chen, an undergraduate student major in Software Engineering at Software College, [Northeastern 
 University(CN)](http://www.neu.edu.cn/). I studied at [UC Berkeley](https://www.berkeley.edu/) for one semester in 2019.
 
-I have spent part of my life in Ningbo, Shenyang, Raleigh(NC) and San Fransisco.
+I used to live in many cities - Ningbo, Shenyang, Raleigh(NC) and San Fransisco.
 
-I have visited many cities in the world. I can speak Mandarin, English, Japanes(N3) and a little bit Korean and Cantonese.
+I can speak Mandarin, English, Japanes(N3) and a little bit Korean and Cantonese. 
+I have left my footprints in Japan, Hong Kong, and America. 
 
 E-mail: echo TWljaGFlbF9DaGVuX0NTQGZveG1haWwuY29t \| base64 -D
 
