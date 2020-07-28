@@ -118,6 +118,20 @@ tags:
 
 ![img](/img/in-post/post-TOEFL/speaking-16.png)
 
+---
+
+The university plans to/ the letter proposes that ...
+
+The man in the conversation, however, disagrees with the proposal.
+
+First, he thinks 理由. 
+
+For example/because/细节
+
+Second, he thinks that 理由.
+
+For example/because/细节
+
 
 
 # Task 3
@@ -142,7 +156,15 @@ tags:
 
 ![img](/img/in-post/post-TOEFL/speaking-20.png)
 
+---
 
+术语 is ...
+
+The professor uses ... as an example.
+
+一方面
+
+另一方面
 
 # Task 4
 
@@ -158,7 +180,17 @@ tags:
 
 把结构理出来再添细节
 
+---
 
+The professor in the lecture explains ...
+
+The first ... is ...
+
+For example, ...
+
+The second ... is ...
+
+For example, ...
 
 ## 常用句式
 
