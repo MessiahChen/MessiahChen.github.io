@@ -8,6 +8,7 @@ header-img: "img/post-bg-tech.jpg"
 header-mask: 20%
 catalog: true
 tags:
+    - git
     - Tech
     - Blog
 ---
