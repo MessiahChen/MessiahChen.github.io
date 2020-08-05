@@ -1,0 +1,16 @@
+---
+layout:     post
+title:      "「GRE」Verbal-Blank Filling"
+subtitle:   "GRE填空"
+date:       2020-08-05 22:00:00
+author:     "MC"
+header-img: "img/post-bg-gre.jpg"
+catalog:     true
+tags:
+    - Notes
+    - GRE
+---
+[陈琦GRE填空方法论](https://www.wanmen.org/courses/586d23485f07127674135dcd/lectures/586d23535f0712767415a980)
+
+[老肖GRE填空方法论](https://www.zhihu.com/question/57132764/answer/219824538)
+
