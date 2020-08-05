@@ -96,7 +96,7 @@ layout: default
                             "\n当前页面：" + res +
                             "\n跳转链接：" + pageurl +
                             "\n评论时间" + ptime.toLocaleString() +
-                            "\n评论内容：" + veditor;
+                            "\n评论内容：\n" + veditor;
                         var httpRequest = new XMLHttpRequest(); //第一步：创建需要的对象
                         httpRequest.open("POST", pushLink, true); //第二步：打开连接
                         httpRequest.setRequestHeader(
