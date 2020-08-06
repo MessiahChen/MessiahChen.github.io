@@ -24,7 +24,7 @@ var S = {
     if (i !== -1) {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
-      S.UI.simulate('|#countdown 3|祝|自己|生日|快乐|#rectangle|陈铭杰生日快乐|');
+      S.UI.simulate('|#countdown 3|21|岁|生日|快乐|#rectangle|陈铭杰生日快乐');
     }
 
     S.Drawing.loop(function () {
