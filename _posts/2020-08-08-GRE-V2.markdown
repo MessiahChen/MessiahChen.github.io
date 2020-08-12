@@ -181,7 +181,35 @@ tags:
 
 # 逻辑题的解题方法
 
+Argument在逻辑学中的定义是: a set of statements in which one of the statements is supported by theothers，即所谓的论证指的是一组语句所组成的集合， 其中一个语句被其他语句所支持。其中，被支持的语句被称为Conclsion，即结论；而用来支持结论的语句被称为Premise(s)，即前提。根据定义，论证中最重要的关系是Support （支持）关系。
 
+在考试中，有些题型考查我们理解论证，即别人给出一篇论证，我们要去理解它在用哪些前提支持哪个结论；有些题型考查我们制造论证，即给出已知条件，我们来推出合适的结论；有些题型考查我们评价论证，即给出论证，让我们评价这个论证的合理性。
+
+#### （一）黑体字功能题（Boldface）
+
+> In the argument given, the two positions in boldface/the two highlighted portions play which of the following roles?
+
+考查理解一个论证的能力。
+
+找前提和结论。关注体现前提结论关系（therefore, the reason is that, can be supported by, since...）的字眼，以及能体现不同视角的字眼。
+
+期望传达的信息：语句体现的立场（作者立场或作者立场的对立面）、语句在论证中的作用（前提或证据、观点或结论）。
+
+#### （二）归纳题（Inference）
+
+考查制造一个论证的能力。
+
+基于原文信息，我们要判定哪个结论可以推断出，顺着原文进行思考，注意不要引入额外的背景知识。
+
+#### （三）解释题（Explanation）
+
+考查制造一个论证的能力。
+
+目的是在满足原文所有事实的背景下，找到一个可能的解释，使得原文的怪事看起来不再奇怪。
+
+所谓寻找一个解释来解释某事，就是寻找一个事件成为导致某事的原因，而不是证明某事的证据。
+
+#### （四）削弱题（Weaken）
 
 
 
