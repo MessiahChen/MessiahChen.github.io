@@ -1,0 +1,57 @@
+---
+layout:     post
+title:      "「GRE」Analytic Writing"
+subtitle:   "GRE写作"
+date:       2020-08-17 2:00:00
+author:     "MC"
+header-img: "img/post-bg-gre.jpg"
+catalog:     true
+tags:
+    - Notes
+    - GRE
+---
+
+> 来源：万炜 《解密GRE写作论证思维》
+
+# Analyze an Issue
+
+### Step 1 题干分析
+
+**1.话题背景**
+
+出题官的建议是：关注论题背后真正的话题（Focus on what is really at issue），而不是紧盯某些具体词语。每一道issue题目都不是一个脱离现实世界的命题，它们都是具有现实意义的。应该先站在说话者的角度，去考虑，当他这么讲的时候，他是想指出什么样的社会现实，他想解决什么社会问题。而不是单纯去想这个说法是对的还是错的。
+
+“No field of study can advance signifcanty unless it incorporates knowiedge and experience fromoutside that field."面对这道题目，一些人很快盯上了no这个绝对词，于是就去想有没有学科的发展不太依赖外部学科。有的人可能想到了数学。假如数学真的不需要依赖外部学科，那理论上这一个例子就可以表明说话者的观点是错的。但我们不可能就去只写数学啊，这样就完全不能反映这个命题真正的社会意义了。很显然，这个话题牵扯的是一个非常普遍的现象，就是学科之间的相互影响和交叉。如今的学术领域，就算能够找到极个别独自发展的领域，但是绝大多数领域都深深受到了其他领域的影响，很可能也在影响着其他领域。因此，显然这道题真正应该思考的是:为什么会出现这样的现象?为什么如今社会学科已经很难独立发展?
+
+"In order to become well-rounded individuals, all college students should be required to take courses inwhich they read poetry, novels, mythology, and other types of imaginative iterature."一种写法纠结于为什么有些学生不需要学imaginative iterature;于是全文都在陈述反驳的理由。但是，我们可以认为这个建议过分激进，但不妨碍我们充分考虑这个建议的意义。我们应该考虑现在的社会背景，那就是大学教育倾向于强调理性思维和逻辑思维，从而忽视了人文精神的培养。在这个语境下，说话者认为，去学习imaginative iterature是-个重要的弥补。那我们这篇文章无论最后立场如何，都应该去讨论imaginative lterature 有着什么样的现实社会意义。
+
+**2.题目的逻辑形式**
+
+（1）观点-理由型题目
+
+> Claim: ... 
+>
+> Reason: ...
+
+分别处理reason和claim的合理性。
+
+一个看法+为这个看法提供的理由。
+
+（2）双方争论型题目
+
+当双方观点恰好对立时，我们没有必要把它们当作两个独立话题来讨论。比如: Some people bleve that collge students should consider only their own talents and interests when choosing a field of stuty. Others believe that college students should base their choice of a field of study on the availabity of jobs in that field. 这道题目当中，两方观点就是同一个论题下恰好对立的两面。如果我们认同选专业只应考虑兴趣特长，那我们就是在说不要考虑就业前景，反之亦然。换一个角度理解，我前面已经说过，不要纠缠于说话者的具体用词，应该考虑整个话题的社会意义。那么这两个现点其实都是在讨论选专业时到底应法考虑什么。因此，只要我们把选专业时到底考虑什么这个问题讲清楚，两方的观点我们其实就都已经处理了。因为我们势必会讨论到兴趣、特长、就业等因素在我们选专业时的权重。**简而言之，当双方争论型题目出现，但双方立场其实就是同一个话题的正反两面时，我们直接处理整个话题就好。**
+
+与此相对的是，有时这种双方争论型题目中的两方观点其实并不对立。如: Some people believe that the purpose of education is to free the mind and the spirit. Others believe that formal education tends to restrain our minds and spirits rather than set them free. 前者认为，教育要解放思想；后者认为，正统教育限制了想想。细心的读者可能会发现，两个观点可以都是对的，因为前者讨论的是教育的理想，而后者谈论的是教育的现实。理想是好的，现实是骨感的，这很正常啊。因此，这两方其实谈论的是不同的话题，我们也必须**把两个话题都分别处理了**，我们既应该谈论教育的目的，同样也应该谈论教育的现状。
+
+（3）包含多个子会题的题目
+
+还有一些题目乍一看没什么特别的，但其实包含了几个独立的内容。这时，我们要注意，论题的每个部分都需要讨论到。比如: The best way to teach is to praise positive actions and ignore negative ones. 这道题明显是两部分的并列：教育需要鼓励积极行为，以及教育需要忽视消极行为。同意前者不代表反对后者，反之亦然。所以，两部分是独立的，两部分都需要在写作时讨论到。当然，两者都需要讨论，不代表两者需要占据同样的篇幅。毕竞，鼓励积极行为的争议性比较小，而忽视消极行为的争议比较大。因此，后者自然值得我们花更多笔墨。
+
+**3.模糊概念的定义**
+
+有一些话题中涉及了一些可能比较抽象或存在多种理解方式的概念，我们必须要明确我们准备使用哪种理解方式，并保证从始至终的统一性。比如: Itis no longer possible tor a society to regard any
+
+当然，我们也可以分别谈论两种意义下论题是否合理。我们可能觉得，取狭义理解，该论题是错的，而取广义理解，该论题是对的。这也是可以的，只要在写的时候明确我们当时选择的是什么理解方式。
+
+### Step 2 头脑风暴
+
