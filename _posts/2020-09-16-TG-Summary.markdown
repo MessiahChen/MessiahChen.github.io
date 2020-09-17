@@ -4,7 +4,7 @@ title:      "Summary: TOEFL & GRE"
 subtitle:   "TG Summary"
 date:       2020-09-16 15:00:00
 author:     "MC"
-header-img: "img/post-bg-tofel.jpg"
+header-img: "img/post-tofel.jpg"
 catalog:     true
 tags:
     - Notes
