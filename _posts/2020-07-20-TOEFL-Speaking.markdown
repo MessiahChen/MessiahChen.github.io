@@ -17,6 +17,7 @@ tags:
 >
 > 1. [清北托福慕课](https://www.bilibili.com/video/BV1rJ411J7qs?from=search&seid=16282066968677358598)
 > 2. 李彦彬 《舌尖上的托福》
+> 3. [如何系统提高托福口语分数？ - 那天的回答 - 知乎](https://www.zhihu.com/question/20856333/answer/214500046)
 
 
 
@@ -142,6 +143,12 @@ Task-2答题模板(Agree or Disagree类型)
 
 ---
 
+![img](/img/in-post/post-TOEFL/speaking-39.jpg)
+
+![img](/img/in-post/post-TOEFL/speaking-40.jpg)
+
+---
+
 The university plans to/ the letter proposes that ...
 
 The man in the conversation, however, disagrees with the proposal.
@@ -229,6 +236,26 @@ So,证明两者关系
 ![img](/img/in-post/post-TOEFL/speaking-24.png)
 
 把结构理出来再添细节
+
+---
+
+提到托福口语的第六题，绝大多数人的第一反应就是，内容长、词汇难、听不懂、说不完。然而,我见过很多很多的案例，都听懂了的人的分数反而比只听懂了一部分的人的分数低。这到底是为什么呢?我们先来看看第六题到底是怎么考的。
+
+![img](/img/in-post/post-TOEFL/speaking-36.jpg)
+
+第六题的讲座(只有听力)中，教授会有两个分论点来解释一个核心话题， 例如上图中的积累主考话题。那么，题目是如何提问的呢?如下图:
+
+![img](/img/in-post/post-TOEFL/speaking-37.jpg)
+
+从题干中可以看出，第六题需要我们用原文的观点和例子，去"解释”文中的概念。也就是说，我们讲的内容还是全部来自原文。那么请大家想一下，原文听力的长度接近两分钟，我们只有60秒的回答时间，考试可能要求我们把原文全部讲完吗？一定是不可能的。我们只需要回答出其中的关键信息就好，而且不需要概括，只需要”挑选"。也就是摘选出其中关键的内容即可。我们来看一下第六题的答题模版。
+
+Task-6答题模板:
+
+![img](/img/in-post/post-TOEFL/speaking-38.jpg)
+
+在模版中，首先要将"1+2"模式的主 旨内容用一句话概括出来。之后每个分论点，用"名称+定义+例子"的模式讲出原文中的关键内容。所以，一共7个核心采分点，全部cover即可， 千万不要在一一个点上恋战太久，导致无法完成回答。
+
+在这里，我请大家记住一句话，"第六题，将7个要点讲全，比讲全某一要点更重要"。
 
 ---
 
