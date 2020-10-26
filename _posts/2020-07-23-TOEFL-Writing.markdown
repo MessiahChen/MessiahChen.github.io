@@ -226,6 +226,12 @@ Admittedly, a minority of individuals tend to believe that…. It is because….
 
 In summary, we may safely draw the conclusion that…./ I want to reiterate that…. Overall, ….
 
+---
+
+In contemporary society, much ink has been spilled about......(题目改写),and some claim that... Such assertion, however, is torn to pieces by others. As far as I am concerned, the statement that...（题目改写）is arbitrary and one-sided because it fails to take all the related circumstances into consideration. We should analyze this statement comprehensively before we draw the eventual conclusion.
+
+In brief, based on the previous discussion, the issue...(改写题目）is complex and needs a case by case analysis. We are not supposed to disregard those situations where the statement is unjustifiable. As a result, I cannot totally agree with this statement.
+
 # Intergrated Writing
 
 ![img](/img/in-post/post-TOEFL/writing-5.png)
