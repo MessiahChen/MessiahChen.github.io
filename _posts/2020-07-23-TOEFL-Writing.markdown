@@ -216,9 +216,15 @@ A的优缺点，B的优缺点组合
 - **列举**：并列多个例子或情况
 - **让步：**段内让步，思考对方会怎样反驳，使论证更严谨
 
+---
 
+Today, a prevalent statement we often hear is that……, because……. A considerable number of opponents, however, argue that……, since……. As far as I am concerned, the former/latter view seems align more with my perspective. Two reasons would suffice here to support my point of view.
 
+To begin with, although…（对立面的好处）, …（不否定论点的好处）, that is because…（本段论点）. Specifically, …（结合生活具体论述）. For instance, …（举出一个例子）. In contrast, if …（采取了对立面）, …（导致的结果）To illustrate, …（再举举反面例子）. Thus, …（再次强调本段论点）.
 
+Admittedly, a minority of individuals tend to believe that…. It is because….However, if we could analyze this issue from the different perspective, we could find those people have oversimplified the real situation that …. Therefore,….
+
+In summary, we may safely draw the conclusion that…./ I want to reiterate that…. Overall, ….
 
 # Intergrated Writing
 
