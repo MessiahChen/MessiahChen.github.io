@@ -37,7 +37,7 @@ GRE: 326 + 3.5 (V: 160, Q: 166)和323 + 3.5 (V: 154, Q: 169)
 **托福：**
 
 - 阅读：《文勇的新托福阅读手稿》
-- [听力](https://michaelchen.xyz/2020/07/24/TOEFL-Listening/)：听听听，只要听不死，就往死里听
+- [听力](https://michaelchen.xyz/2020/07/24/TOEFL-Listening/)：听听听，只要听不死，就往死里听（这个别太听我的，我听力28→26→25→21稳步提升）
 - [口语](https://michaelchen.xyz/2020/07/20/TOEFL-Speaking/)：《舌尖上的托福》，《TOEFL口语/写作素材精选精练》
 - [写作](https://michaelchen.xyz/2020/07/24/TOEFL-Writing/)：《托福写作白皮书》（没上25看这个），《笔尖上的托福》（要上30看这个）
 
