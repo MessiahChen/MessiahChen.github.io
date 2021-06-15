@@ -103,7 +103,7 @@ ga_domain: MichaelChen.xyz
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "veni vidi vici<br>我来 我见 我征服"
-sidebar-avatar: /img/avatar-mc.png      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/avatar-mc-old.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
