@@ -1,8 +1,8 @@
 > Fiat lux 
 
-Hi, I'm Mingjie(Michael) Chen, an undergraduate student major in Software Engineering at Software College, [Northeastern 
-University(CN)](https://www.neu.edu.cn/), visiting student at [UC Berkeley](https://www.berkeley.edu/) for one semester, 
-and an incoming graduate student at [Carnegie Mellon University](https://www.cmu.edu).
+Hi, I'm Mingjie(Michael) Chen, a graduate student at [Carnegie Mellon University](https://www.cmu.edu).
+I graduated from Software College, [Northeastern University(CN)](https://www.neu.edu.cn/) major in Software Engineering,
+ and I also studied at [UC Berkeley](https://www.berkeley.edu/) for one semester.
 
 I used to live in many cities - Ningbo, Shenyang, Raleigh(NC) and San Fransisco.
 
