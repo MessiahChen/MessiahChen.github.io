@@ -130,10 +130,10 @@ friends: [
       title: "[Xinran Tang]",
       href: "https://XinranTang.github.io/"
     },
-    {
-      title: "[William Choe]",
-      href: "https://www.williamchoe.com/"
-    },
+#    {
+#      title: "[William Choe]",
+#      href: "https://www.williamchoe.com/"
+#    },
     {
       title: "[Scott Ma]",
       href: "https://mhsfire.cn/"
@@ -146,10 +146,10 @@ friends: [
       title: "[Sihao Chen]",
       href: "https://sihao.dev"
     },
-    {
-      title: "[Carl Li]",
-      href: "https://portfolio.lalxyy.me/"
-    },
+#    {
+#      title: "[Carl Li]",
+#      href: "https://portfolio.lalxyy.me/"
+#    },
     {
       title: "[Raven Xu]",
       href: "https://ravenxu.top"
