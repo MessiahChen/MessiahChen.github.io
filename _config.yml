@@ -127,20 +127,28 @@ page-mathjax: false
 # Friends
 friends: [
     {
-        title: "[Carl Li]",
-        href: "https://portfolio.lalxyy.me/"
+      title: "[Xinran Tang]",
+      href: "https://XinranTang.github.io/"
     },
     {
-        title: "[William Choe]",
-        href: "https://www.williamchoe.com/"
+      title: "[William Choe]",
+      href: "https://www.williamchoe.com/"
+    },
+    {
+      title: "[Scott Ma]",
+      href: "https://mhsfire.cn/"
     },
     {
       title: "[白]",
       href: "https://forself.me"
     },
     {
-      title: "[Scott Ma]",
-      href: "https://mhsfire.cn/"
+      title: "[Sihao Chen]",
+      href: "https://sihao.dev"
+    },
+    {
+      title: "[Carl Li]",
+      href: "https://portfolio.lalxyy.me/"
     },
     {
       title: "[Raven Xu]",
