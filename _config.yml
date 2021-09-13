@@ -127,6 +127,10 @@ page-mathjax: false
 # Friends
 friends: [
     {
+      title: "[Jinqi Luo]",
+      href: "  https://peterljq.github.io/"
+    },
+    {
       title: "[Xinran Tang]",
       href: "https://XinranTang.github.io/"
     },
