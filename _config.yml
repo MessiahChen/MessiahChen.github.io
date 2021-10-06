@@ -142,10 +142,10 @@ friends: [
       title: "[Scott Ma]",
       href: "https://mhsfire.cn/"
     },
-    {
-      title: "[白]",
-      href: "https://forself.me"
-    },
+#    {
+#      title: "[白]",
+#      href: "https://forself.me"
+#    },
     {
       title: "[Sihao Chen]",
       href: "https://sihao.dev"
