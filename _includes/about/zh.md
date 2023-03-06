@@ -9,7 +9,7 @@ Hi，我是陈铭杰，在[卡内基梅隆大学](https://www.cmu.edu)读硕士�
 
 个人邮箱：echo TWljaGFlbF9DaGVuX0NTQGZveG1haWwuY29t \| base64 -D
 
-戳这里看我的[简历](/assets/MingjieChen-CN.pdf)
+戳这里看我的[简历](/assets/Mingjie Chen-Privacy Engineer.pdf)
 
 ---
 <!--

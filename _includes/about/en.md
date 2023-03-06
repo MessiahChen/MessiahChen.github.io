@@ -11,7 +11,7 @@ I have left my footprints in Japan, Hong Kong, and America.
 
 E-mail: echo TWljaGFlbF9DaGVuX0NTQGZveG1haWwuY29t \| base64 -D
 
-MC's [Resume](/assets/MingjieChen-EN.pdf)
+MC's [Resume](/assets/Mingjie Chen-Privacy Engineer.pdf)
 
 ---
 <!--
